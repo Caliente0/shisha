@@ -18,9 +18,9 @@ const Hero = () => {
       
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-up">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 glow-gold leading-tight">
-          Ignite the Night
+          Caliente Lounge & Shisha Bar
           <br />
-          <span className="text-4xl md:text-6xl lg:text-7xl">at Caliente</span>
+          <span className="text-4xl md:text-6xl lg:text-7xl"></span>
         </h1>
         
         <p className="text-xl md:text-2xl text-text-secondary mb-4 font-body">
