@@ -24,7 +24,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-text-secondary mb-4 font-body">
-          Premium shishas • Signature cocktails • Golden nights
+          Premium Shishas • Signature cocktails • Bold flavors
         </p>
         
         <p className="text-lg text-text-muted mb-8 font-body italic">

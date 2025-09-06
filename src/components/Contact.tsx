@@ -12,8 +12,8 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Address", 
-      value: "Riviera Ave 21, City Center",
-      action: () => window.open("https://maps.google.com/?q=Riviera+Ave+21,+City+Center", "_blank")
+      value: "Constantias 11, Paphos 8041",
+      action: () => window.open("https://maps.app.goo.gl/TUmtna2tsh2KAvPE7?g_st=ipc")
     },
     {
       icon: Clock,
@@ -27,13 +27,13 @@ const Contact = () => {
     {
       icon: Instagram,
       label: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/caliente_shisha_loungebar?igsh=M2x1eGkyZng4dGRz",
       color: "hover:text-pink-400"
     },
     {
       icon: Facebook, 
       label: "Facebook",
-      href: "#",
+      href: "https://www.facebook.com/share/1BFHCWgG97/?mibextid=wwXIfr",
       color: "hover:text-blue-400"
     },
     {
