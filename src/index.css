@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Caliente Shisha Bar Design System - Luxury Dark Marble Theme
+All colors MUST be HSL. Gold + Black theme only.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 240 5% 6%; /* Deep charcoal */
+    --foreground: 0 0% 95%; /* Nearly white */
+    
+    /* Caliente Gold Palette */
+    --primary: 42 75% 35%; /* Rich gold #9e8123 */
+    --primary-foreground: 240 5% 6%;
+    --primary-glow: 42 75% 50%; /* Brighter gold for effects */
+    
+    /* Surface Colors */
+    --secondary: 35 30% 12%; /* Dark gold-brown #2f2921 */
+    --secondary-foreground: 0 0% 90%;
+    
+    --accent: 42 75% 35%; /* Gold accent */
+    --accent-foreground: 240 5% 6%;
+    
+    /* Glass Morphism */
+    --glass: 240 5% 6% / 0.4; /* Semi-transparent black */
+    --glass-border: 42 75% 35% / 0.3; /* Gold border */
+    
+    /* Text Opacity Variants */
+    --text-primary: 0 0% 95%; /* 95% white */
+    --text-secondary: 0 0% 75%; /* 75% white */
+    --text-muted: 0 0% 65%; /* 65% white */
+
+    
+    /* Cards & Surfaces */
+    --card: 240 5% 8%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 90%;
+    
+    --popover: 240 5% 8%;
+    --popover-foreground: 0 0% 90%;
+    
+    /* UI Elements */
+    --muted: 240 5% 15%;
+    --muted-foreground: 0 0% 65%;
+    
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 95%;
+    
+    --border: 42 75% 35% / 0.2; /* Subtle gold border */
+    --input: 240 5% 12%;
+    --ring: 42 75% 50%; /* Gold focus ring */
+    
+    --radius: 0.75rem;
+    
+    /* Custom Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(240 5% 6% / 0.9), hsl(42 75% 8% / 0.3));
+    --gradient-card: linear-gradient(145deg, hsl(240 5% 8% / 0.6), hsl(240 5% 6% / 0.8));
+    --gradient-gold: linear-gradient(135deg, hsl(42 75% 35%), hsl(42 75% 50%));
+    
+    /* Shadows & Glows */
+    --shadow-glow: 0 0 20px hsl(42 75% 50% / 0.3);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
+    --shadow-ember: 0 0 10px hsl(42 90% 60% / 0.6);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  /* Dark mode is default for Caliente theme */
+  .dark {
+    /* Same as root - we use dark theme as default */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: url('/black-marble.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  /* Typography Classes */
+  .font-heading {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Glow Effects */
+  .glow-gold {
+    text-shadow: 0 0 20px hsl(var(--primary-glow));
+    color: hsl(var(--primary));
+  }
+
+  .glow-border {
+    border: 1px solid hsl(var(--primary) / 0.3);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Glass Morphism */
+  .glass {
+    background: hsl(var(--glass));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--glass-border));
+  }
+
+  /* Hover Effects */
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+    transform: scale(1.02);
+    transition: var(--transition-glow);
+  }
+
+  /* Smooth Animations */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Smoke Animation */
+  .smoke-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, hsl(0 0% 100% / 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(0 0% 100% / 0.02) 0%, transparent 50%);
+    animation: smokeMove 20s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes smokeMove {
+    0%, 100% { transform: translateX(0) translateY(0) rotate(0deg); }
+    25% { transform: translateX(-10px) translateY(-5px) rotate(1deg); }
+    50% { transform: translateX(10px) translateY(-10px) rotate(-1deg); }
+    75% { transform: translateX(-5px) translateY(-15px) rotate(0.5deg); }
+  }
+}
