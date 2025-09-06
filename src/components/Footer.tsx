@@ -3,23 +3,7 @@ import { Instagram, Facebook, MessageCircle, Clock, MapPin } from 'lucide-react'
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const socialLinks = [
-    {
-      icon: Instagram,
-      href: "#",
-      label: "Instagram"
-    },
-    {
-      icon: Facebook,
-      href: "#",
-      label: "Facebook"
-    },
-    {
-      icon: MessageCircle,
-      href: "https://wa.me/3575555555?text=Hello%20Caliente",
-      label: "WhatsApp"
-    }
-  ];
+
 
   return (
     <footer className="relative py-16 border-t border-primary/20">
@@ -49,44 +33,13 @@ const Footer = () => {
               </div>
               <p className="text-text-secondary font-body">
                 Daily 17:00 – 02:00
+                  (Monday Closed)
               </p>
             </div>
 
-            <div className="flex items-center justify-center space-x-2 text-text-secondary">
-              <MapPin className="w-4 h-4 text-primary" />
-              <span className="font-body text-sm">
-                Riviera Ave 21, City Center
-              </span>
-            </div>
           </div>
 
-          {/* Social Links */}
-          <div className="text-center md:text-right">
-            <h4 className="text-lg font-heading font-semibold text-primary mb-4">
-              Connect With Us
-            </h4>
-            <div className="flex justify-center md:justify-end space-x-4 mb-6">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full glass flex items-center justify-center text-primary hover:text-primary-glow hover-glow transition-all duration-300"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-            
-            <a
-              href="tel:+35755555555"
-              className="inline-flex items-center space-x-2 text-primary hover:text-primary-glow transition-colors duration-300 font-body"
-            >
-              <span>+357 55 555 555</span>
-            </a>
-          </div>
+        
         </div>
 
         {/* Bottom Bar */}
@@ -97,7 +50,7 @@ const Footer = () => {
           <div className="mt-2 flex items-center justify-center space-x-2">
             <div className="w-1 h-1 bg-primary rounded-full opacity-60"></div>
             <span className="text-xs text-text-muted font-body">
-              Crafted with passion
+              Crafted with passion by HexaDev Team.
             </span>
             <div className="w-1 h-1 bg-primary rounded-full opacity-60"></div>
           </div>

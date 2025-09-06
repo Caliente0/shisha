@@ -27,8 +27,9 @@ const About = () => {
             Experience Caliente
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed font-body">
-            Step into a world where luxury meets tradition. Our premium lounge offers an elevated shisha experience 
-            in an atmosphere of sophistication and warmth, where every detail is crafted for your ultimate comfort.
+            Step into a world of vibrant energy, smooth shisha, and unforgettable nights. 
+            At Caliente Lounge & Shisha Bar, every detail is designed to set the perfect mood 
+            — from our handcrafted cocktails to our flavorful shisha blends.
           </p>
         </div>
 

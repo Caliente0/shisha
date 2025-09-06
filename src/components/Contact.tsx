@@ -35,12 +35,6 @@ const Contact = () => {
       label: "Facebook",
       href: "https://www.facebook.com/share/1BFHCWgG97/?mibextid=wwXIfr",
       color: "hover:text-blue-400"
-    },
-    {
-      icon: MessageCircle,
-      label: "WhatsApp",
-      href: "https://wa.me/3575555555?text=Hello%20Caliente",
-      color: "hover:text-green-400"
     }
   ];
 
@@ -52,7 +46,7 @@ const Contact = () => {
             Visit Caliente
           </h2>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto font-body">
-            Join us for an unforgettable evening of premium shishas, crafted cocktails, and luxurious atmosphere.
+            Unwind, connect, and enjoy shisha, drinks, and good vibes — the perfect place to make every night special.
           </p>
         </div>
 
@@ -113,34 +107,14 @@ const Contact = () => {
                 <div className="text-center">
                   <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
                   <p className="text-text-secondary font-body">
-                    Riviera Ave 21, City Center
+                    Constantias 11, Paphos 8041
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Button
-                onClick={() => window.open("tel:+35755555555", "_self")}
-                className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold py-3 hover-glow transition-all duration-300"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now
-              </Button>
-              
-              <Button
-                onClick={() => window.open("https://wa.me/3575555555?text=Hello%20Caliente", "_blank")}
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold py-3 hover-glow transition-all duration-300"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp
-              </Button>
-            </div>
-
             <Button
-              onClick={() => window.open("https://maps.google.com/?q=Riviera+Ave+21,+City+Center", "_blank")}
+              onClick={() => window.open("https://maps.app.goo.gl/TUmtna2tsh2KAvPE7?g_st=ipc", "_blank")}
               variant="outline"
               className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold py-3 hover-glow transition-all duration-300"
             >
