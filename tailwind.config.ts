@@ -12,31 +12,29 @@ export default {
         "2xl": "1400px",
       },
     },
+    screens: {
+      'xs': '375px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
-        /* Core Design System Colors */
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        
-        /* Caliente Brand Colors */
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        
-        /* UI Elements */
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -44,6 +42,10 @@ export default {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -53,34 +55,28 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        
-        /* Custom Text Colors */
-        "text-primary": "hsl(var(--text-primary))",
-        "text-secondary": "hsl(var(--text-secondary))",
-        "text-muted": "hsl(var(--text-muted))",
-        
-        /* Glass Effects */
-        glass: "hsl(var(--glass))",
-        "glass-border": "hsl(var(--glass-border))",
+        // Premium Caliente color system
+        black: "hsl(var(--black))",
+        ink: "hsl(var(--ink))",
+        "gold-light": "hsl(var(--gold-light))",
+        gold: "hsl(var(--gold))",
+        "gold-deep": "hsl(var(--gold-deep))",
+        white: "hsl(var(--white))",
+      },
+      fontFamily: {
+        heading: "var(--font-heading)",
+        body: "var(--font-body)",
+      },
+      spacing: {
+        'nav': 'var(--nav-height)',
+        'section': 'var(--section-padding)',
+        'section-mobile': 'var(--section-padding-mobile)',
+        'section-xs': 'var(--section-padding-xs)',
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      backgroundImage: {
-        'gradient-hero': 'var(--gradient-hero)',
-        'gradient-card': 'var(--gradient-card)',
-        'gradient-gold': 'var(--gradient-gold)',
-      },
-      boxShadow: {
-        'glow': 'var(--shadow-glow)',
-        'card': 'var(--shadow-card)',
-        'ember': 'var(--shadow-ember)',
-      },
-      fontFamily: {
-        'heading': ['Playfair Display', 'serif'],
-        'body': ['Inter', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {

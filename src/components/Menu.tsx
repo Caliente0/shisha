@@ -1,159 +1,133 @@
-import { Badge } from '@/components/ui/badge';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
-// Sample menu data - in a real app this would come from menu.json
-const menuItems = [
-  {
-    id: 1,
-    name: "Blue Flame",
-    description: "Citrus mint • icy drip • velvet clouds",
-    price: "€22",
-    tag: "Signature",
-    category: "shisha"
-  },
-  {
-    id: 2,
-    name: "Golden Peach",
-    description: "Sun-ripe peach • creamy finish",
-    price: "€20",
-    tag: "New",
-    category: "shisha"
-  },
-  {
-    id: 3,
-    name: "Midnight Grape",
-    description: "Dark grape • cool mint",
-    price: "€19",
-    tag: "Classic",
-    category: "shisha"
-  },
-  {
-    id: 4,
-    name: "Royal Amber",
-    description: "Warm amber • spiced notes • golden essence",
-    price: "€24",
-    tag: "Premium",
-    category: "shisha"
-  },
-  {
-    id: 5,
-    name: "Velvet Rose",
-    description: "Persian rose • smooth finish • floral notes",
-    price: "€21",
-    tag: "Signature",
-    category: "shisha"
-  },
-  {
-    id: 6,
-    name: "Tropical Breeze",
-    description: "Mango passion • coconut twist • tropical escape",
-    price: "€20",
-    tag: "Classic",
-    category: "shisha"
-  },
-  {
-    id: 7,
-    name: "Caliente Gold",
-    description: "Premium gold leaf cocktail • champagne • 24k gold",
-    price: "€35",
-    tag: "Signature",
-    category: "cocktail"
-  },
-  {
-    id: 8,
-    name: "Smoke & Mirrors",
-    description: "Whiskey • smoked simple syrup • dry ice presentation",
-    price: "€18",
-    tag: "New",
-    category: "cocktail"
-  },
-  {
-    id: 9,
-    name: "Golden Hour",
-    description: "Aged rum • honey • gold dust rim",
-    price: "€16",
-    tag: "Classic",
-    category: "cocktail"
+interface MenuItem {
+  name: string;
+  tag: string;
+  price: string;
+  desc: string;
+}
+
+interface MenuData {
+  highlights: MenuItem[];
+}
+
+export const Menu = () => {
+  const [menuData, setMenuData] = useState<MenuData>({ highlights: [] });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/data/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        setMenuData(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Failed to load menu:', err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <section id="menu" className="relative py-8 xs:py-10 sm:py-12 md:py-16 lg:py-section">
+        <div className="absolute inset-0 bg-ink/40" />
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gold-light"></div>
+          </div>
+        </div>
+      </section>
+    );
   }
-];
 
-const getTagColor = (tag: string) => {
-  switch (tag) {
-    case 'Signature':
-      return 'bg-primary text-primary-foreground';
-    case 'New':
-      return 'bg-green-600 text-white';
-    case 'Premium':
-      return 'bg-purple-600 text-white';
-    default:
-      return 'bg-secondary text-secondary-foreground';
-  }
-};
-
-const Menu = () => {
   return (
-    <section id="menu" className="py-20 relative">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold glow-gold mb-6">
-            Menu Highlights
-          </h2>
-          <p className="text-xl text-text-secondary max-w-2xl mx-auto font-body">
-            Discover our carefully curated selection of premium shishas and signature cocktails.
-          </p>
+    <section id="menu" className="relative py-8 xs:py-10 sm:py-12 md:py-16 lg:py-section">
+      {/* Background with overlay */}
+      <div className="absolute inset-0 bg-ink/40" />
+      
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10 xs:mb-12 sm:mb-16 md:mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p className="small-caps mb-6">Menu Highlights</p>
+            <h2 className="heading-secondary text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 xs:mb-8">
+              Premium
+              <br />
+              <span className="text-gold-light">Selections</span>
+            </h2>
+          </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {menuItems.map((item, index) => (
-            <div
-              key={item.id}
-              className="glass rounded-lg p-6 hover-glow transition-all duration-300 animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 sm:gap-8 md:gap-10">
+          {menuData.highlights.map((item, index) => (
+            <motion.div
+              key={item.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="premium-card hover-lift p-4 xs:p-6 sm:p-8"
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex-1">
-                  <h3 className="text-xl font-heading font-semibold text-primary mb-2">
-                    {item.name}
-                  </h3>
-                  <Badge 
-                    className={`${getTagColor(item.tag)} text-xs font-medium mb-3`}
-                  >
-                    {item.tag}
-                  </Badge>
-                </div>
-                <div className="text-right">
-                  <span className="text-2xl font-bold text-primary glow-gold">
-                    {item.price}
+              {/* Tag and Price */}
+              <div className="flex justify-between items-start mb-6">
+                <span className={`px-4 py-2 rounded-full text-sm font-semibold ${
+                  item.tag === 'Signature' ? 'gold-metallic text-black' :
+                  item.tag === 'New' ? 'bg-emerald-600 text-white' :
+                  item.tag === 'Premium' ? 'bg-amber-700 text-white' :
+                  item.tag === 'Popular' ? 'bg-rose-600 text-white' :
+                  item.tag === 'Classic' ? 'bg-slate-600 text-white' :
+                  'gold-metallic text-black'
+                }`}>
+                  {item.tag}
+                </span>
+                <div className="gold-coin w-10 h-10 rounded-full flex items-center justify-center">
+                  <span className="text-black font-heading font-bold text-base">
+                    {item.price.replace('€', '')}
                   </span>
                 </div>
               </div>
 
-              <p className="text-text-secondary font-body leading-relaxed italic">
-                {item.description}
-              </p>
+              {/* Name */}
+              <h3 className="heading-secondary text-xl xs:text-2xl md:text-3xl mb-3 xs:mb-4 group-hover:text-gold-light transition-colors">
+                {item.name}
+              </h3>
 
-              {/* Decorative Element */}
-              <div className="mt-4 pt-4 border-t border-primary/20">
-                <div className="w-8 h-1 bg-primary rounded-full opacity-60"></div>
-              </div>
-            </div>
+              {/* Description */}
+              <p className="body-primary text-sm xs:text-base md:text-lg leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16 animate-fade-up" style={{ animationDelay: '0.8s' }}>
-          <p className="text-lg text-text-secondary mb-6 font-body">
-            Experience the full range of our premium offerings
+        {/* Call to action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center mt-10 xs:mt-12 sm:mt-16 md:mt-20"
+        >
+          <p className="body-primary mb-6 xs:mb-8 text-lg xs:text-xl">
+            Ready to experience our premium selection?
           </p>
-          <div className="inline-flex items-center justify-center space-x-2 glass px-6 py-3 rounded-lg">
-            <span className="text-primary font-heading font-semibold">
-              Daily 17:00 – 02:00
-            </span>
-            <div className="w-2 h-2 bg-primary rounded-full shadow-ember animate-pulse"></div>
-          </div>
-        </div>
+          <button
+            onClick={() => {
+              const element = document.getElementById('contact');
+              if (element) element.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="px-6 xs:px-8 sm:px-10 py-3 xs:py-4 sm:py-5 gold-metallic text-black hover-lift font-semibold text-base xs:text-lg sm:text-xl rounded-full transition-all duration-300 min-h-[48px] min-w-[160px] xs:min-w-[180px] sm:min-w-[200px]"
+          >
+            Contact Us
+          </button>
+        </motion.div>
       </div>
     </section>
   );
 };
-
-export default Menu;

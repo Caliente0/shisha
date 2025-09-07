@@ -1,0 +1,13 @@
+{
+  "highlights": [
+    { "name": "Blue Flame", "tag": "Signature", "price": "€22", "desc": "Citrus mint • icy drip • velvet clouds" },
+    { "name": "Golden Peach", "tag": "New", "price": "€20", "desc": "Sun-ripe peach • creamy finish" },
+    { "name": "Midnight Grape", "tag": "Classic", "price": "€19", "desc": "Dark grape • cool mint" },
+    { "name": "Royal Mix", "tag": "Premium", "price": "€25", "desc": "Exotic blend • double apple • smooth draw" },
+    { "name": "Citrus Burst", "tag": "Popular", "price": "€18", "desc": "Fresh orange • lemon zest • energizing" },
+    { "name": "Vanilla Dream", "tag": "Classic", "price": "€20", "desc": "Creamy vanilla • hint of spice • luxurious" },
+    { "name": "Mint Chill", "tag": "Refreshing", "price": "€17", "desc": "Pure mint • cooling sensation • crisp finish" },
+    { "name": "Berry Fusion", "tag": "Seasonal", "price": "€21", "desc": "Mixed berries • sweet notes • aromatic clouds" },
+    { "name": "Spiced Chai", "tag": "Exotic", "price": "€23", "desc": "Warming spices • tea essence • unique experience" }
+  ]
+}

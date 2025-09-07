@@ -2,78 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Caliente Shisha Bar Design System - Luxury Dark Marble Theme
-All colors MUST be HSL. Gold + Black theme only.
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+/* Caliente Shisha Lounge Design System - Black Marble + Gold Only */
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 240 5% 6%; /* Deep charcoal */
-    --foreground: 0 0% 95%; /* Nearly white */
+    /* Core colors - Premium metallic system */
+    --black: 225 25% 3%;             /* #080808 deeper base */
+    --ink: 0 0% 6%;                  /* #0F0F0F section backgrounds */
+    --gold-light: 48 74% 75%;        /* #F2D38B light metallic gold */
+    --gold: 42 52% 47%;              /* #B8923A mid metallic gold */
+    --gold-deep: 42 64% 34%;         /* #8E6B1F deep metallic gold */
+    --white: 0 0% 100%;              /* white base */
+    --muted-white: 0 0% 100%;        /* for rgba calc */
     
-    /* Caliente Gold Palette */
-    --primary: 42 75% 35%; /* Rich gold #9e8123 */
-    --primary-foreground: 240 5% 6%;
-    --primary-glow: 42 75% 50%; /* Brighter gold for effects */
-    
-    /* Surface Colors */
-    --secondary: 35 30% 12%; /* Dark gold-brown #2f2921 */
-    --secondary-foreground: 0 0% 90%;
-    
-    --accent: 42 75% 35%; /* Gold accent */
-    --accent-foreground: 240 5% 6%;
-    
-    /* Glass Morphism */
-    --glass: 240 5% 6% / 0.4; /* Semi-transparent black */
-    --glass-border: 42 75% 35% / 0.3; /* Gold border */
-    
-    /* Text Opacity Variants */
-    --text-primary: 0 0% 95%; /* 95% white */
-    --text-secondary: 0 0% 75%; /* 75% white */
-    --text-muted: 0 0% 65%; /* 65% white */
-
-    
-    /* Cards & Surfaces */
-    --card: 240 5% 8%; /* Slightly lighter than background */
-    --card-foreground: 0 0% 90%;
-    
-    --popover: 240 5% 8%;
-    --popover-foreground: 0 0% 90%;
-    
-    /* UI Elements */
-    --muted: 240 5% 15%;
-    --muted-foreground: 0 0% 65%;
-    
-    --destructive: 0 75% 50%;
-    --destructive-foreground: 0 0% 95%;
-    
-    --border: 42 75% 35% / 0.2; /* Subtle gold border */
-    --input: 240 5% 12%;
-    --ring: 42 75% 50%; /* Gold focus ring */
-    
+    /* Design system mappings */
+    --background: var(--black);
+    --foreground: var(--white);
+    --card: var(--ink);
+    --card-foreground: var(--white);
+    --popover: var(--ink);
+    --popover-foreground: var(--white);
+    --primary: var(--gold);
+    --primary-foreground: var(--black);
+    --secondary: var(--ink);
+    --secondary-foreground: var(--white);
+    --muted: var(--ink);
+    --muted-foreground: var(--muted-white);
+    --accent: var(--gold);
+    --accent-foreground: var(--black);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--white);
+    --border: var(--gold);
+    --input: var(--ink);
+    --ring: var(--gold);
     --radius: 0.75rem;
     
-    /* Custom Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(240 5% 6% / 0.9), hsl(42 75% 8% / 0.3));
-    --gradient-card: linear-gradient(145deg, hsl(240 5% 8% / 0.6), hsl(240 5% 6% / 0.8));
-    --gradient-gold: linear-gradient(135deg, hsl(42 75% 35%), hsl(42 75% 50%));
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
     
-    /* Shadows & Glows */
-    --shadow-glow: 0 0 20px hsl(42 75% 50% / 0.3);
-    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
-    --shadow-ember: 0 0 10px hsl(42 90% 60% / 0.6);
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-glow: box-shadow 0.3s ease, transform 0.2s ease;
+    /* Spacing & sizing */
+    --nav-height: 70px;
+    --section-padding: 80px;
+    --section-padding-mobile: 40px;
+    --section-padding-xs: 32px;
   }
-
-  /* Dark mode is default for Caliente theme */
+  
+  /* Dark mode - same as light for this design */
   .dark {
-    /* Same as root - we use dark theme as default */
+    --background: var(--black);
+    --foreground: var(--white);
+    --card: var(--ink);
+    --card-foreground: var(--white);
+    --popover: var(--ink);
+    --popover-foreground: var(--white);
+    --primary: var(--gold);
+    --primary-foreground: var(--black);
+    --secondary: var(--ink);
+    --secondary-foreground: var(--white);
+    --muted: var(--ink);
+    --muted-foreground: var(--muted-white);
+    --accent: var(--gold);
+    --accent-foreground: var(--black);
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: var(--white);
+    --border: var(--gold);
+    --input: var(--ink);
+    --ring: var(--gold);
   }
 }
 
@@ -83,82 +78,286 @@ All colors MUST be HSL. Gold + Black theme only.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    background-image: url('/black-marble.jpg');
-    background-size: cover;
-    background-position: center;
+    @apply bg-background text-foreground font-body antialiased;
+    font-family: var(--font-body);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  
+  /* Enhanced marble background with gold grain */
+  .marble-bg {
+    background-image: url('/marble.jpg');
+    background-position: center 25%;
+    background-size: 140%;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    position: relative;
   }
-
-  /* Typography Classes */
-  .font-heading {
-    font-family: 'Playfair Display', serif;
-  }
-
-  .font-body {
-    font-family: 'Inter', sans-serif;
-  }
-
-  /* Glow Effects */
-  .glow-gold {
-    text-shadow: 0 0 20px hsl(var(--primary-glow));
-    color: hsl(var(--primary));
-  }
-
-  .glow-border {
-    border: 1px solid hsl(var(--primary) / 0.3);
-    box-shadow: var(--shadow-glow);
-  }
-
-  /* Glass Morphism */
-  .glass {
-    background: hsl(var(--glass));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid hsl(var(--glass-border));
-  }
-
-  /* Hover Effects */
-  .hover-glow:hover {
-    box-shadow: var(--shadow-glow);
-    transform: scale(1.02);
-    transition: var(--transition-glow);
-  }
-
-  /* Smooth Animations */
-  .animate-fade-up {
-    animation: fadeUp 0.6s ease-out;
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+  
+  @media (max-width: 768px) {
+    .marble-bg {
+      background-attachment: scroll;
+      background-size: 180%;
+      background-position: center 20%;
     }
   }
+  
+  @media (max-width: 480px) {
+    .marble-bg {
+      background-size: 200%;
+      background-position: center 15%;
+    }
+  }
+  
+  /* Gold grain overlay */
+  .marble-grain {
+    background: linear-gradient(45deg, 
+      hsl(var(--gold-light) / 0.02) 0%, 
+      hsl(var(--gold) / 0.03) 50%, 
+      hsl(var(--gold-light) / 0.02) 100%
+    );
+  }
+  
+  /* Enhanced vignette */
+  .vignette-overlay {
+    background: radial-gradient(ellipse at center, transparent 15%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.7) 100%);
+  }
+  
+  /* Legibility film */
+  .legibility-overlay {
+    background: rgba(8, 8, 8, 0.55);
+  }
+}
 
-  /* Smoke Animation */
-  .smoke-overlay {
+@layer components {
+  /* Premium metallic effects */
+  .gold-glow-text {
+    text-shadow: 
+      0 0 8px hsl(var(--gold-light) / 0.25),
+      0 0 16px hsl(var(--gold) / 0.18);
+  }
+  
+  .gold-glow-subtle {
+    box-shadow: 
+      0 0 18px hsl(var(--gold) / 0.2),
+      inset 0 1px 0 hsl(var(--gold-light) / 0.15),
+      0 1px 0 hsl(var(--gold-deep) / 0.3);
+    border: 1px solid hsl(var(--gold) / 0.24);
+  }
+  
+  .gold-metallic {
+    background: linear-gradient(180deg, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 45%, hsl(var(--gold-deep)) 100%);
+    border: 1px solid hsl(var(--gold-light) / 0.24);
+  }
+  
+  .gold-coin {
+    background: linear-gradient(135deg, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 50%, hsl(var(--gold-deep)) 100%);
+    border: 2px solid hsl(var(--gold-light) / 0.3);
+    box-shadow: 
+      inset 0 1px 0 hsl(var(--gold-light) / 0.4),
+      0 2px 8px hsl(var(--gold-deep) / 0.6);
+  }
+  
+  /* Enhanced typography with metallic gradients */
+  .heading-primary {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    background: linear-gradient(180deg, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 45%, hsl(var(--gold-deep)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  
+  .heading-secondary {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: hsl(var(--white) / 0.94);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  
+  .body-primary {
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.84);
+    line-height: 1.6;
+  }
+  
+  /* Mobile-first responsive utilities */
+  @media (max-width: 375px) {
+    .py-section-xs {
+      padding-top: var(--section-padding-xs);
+      padding-bottom: var(--section-padding-xs);
+    }
+  }
+  
+  .small-caps {
+    font-family: var(--font-body);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: hsl(var(--gold));
+  }
+  
+  /* Enhanced smoke animation - more visible */
+  @keyframes drift {
+    0% { 
+      transform: translate3d(-6%, 3%, 0) scale(1) rotate(0deg);
+      opacity: 0.12;
+    }
+    25% { 
+      transform: translate3d(2%, -2%, 0) scale(1.05) rotate(1deg);
+      opacity: 0.18;
+    }
+    50% { 
+      transform: translate3d(4%, -4%, 0) scale(1.12) rotate(-1deg);
+      opacity: 0.16;
+    }
+    75% { 
+      transform: translate3d(-2%, 1%, 0) scale(0.98) rotate(0.5deg);
+      opacity: 0.14;
+    }
+    100% { 
+      transform: translate3d(-6%, 3%, 0) scale(1) rotate(0deg);
+      opacity: 0.12;
+    }
+  }
+  
+  .smoke-particle {
+    animation: drift 28s ease-in-out infinite;
+    filter: blur(12px) contrast(1.2);
+    background: radial-gradient(circle, hsl(var(--white) / 0.16) 0%, hsl(var(--gold-light) / 0.08) 70%, transparent 100%);
+    border-radius: 50%;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 80%, hsl(0 0% 100% / 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, hsl(0 0% 100% / 0.02) 0%, transparent 50%);
-    animation: smokeMove 20s ease-in-out infinite;
     pointer-events: none;
   }
-
-  @keyframes smokeMove {
-    0%, 100% { transform: translateX(0) translateY(0) rotate(0deg); }
-    25% { transform: translateX(-10px) translateY(-5px) rotate(1deg); }
-    50% { transform: translateX(10px) translateY(-10px) rotate(-1deg); }
-    75% { transform: translateX(-5px) translateY(-15px) rotate(0.5deg); }
+  
+  /* Enhanced golden ember flickers */
+  @keyframes flick {
+    0%, 100% { 
+      opacity: 0.2; 
+      transform: scale(1) rotate(0deg);
+      filter: blur(1.5px) brightness(1);
+    }
+    25% { 
+      opacity: 0.45; 
+      transform: scale(1.2) rotate(90deg);
+      filter: blur(1px) brightness(1.3);
+    }
+    50% { 
+      opacity: 0.6; 
+      transform: scale(1.4) rotate(180deg);
+      filter: blur(0.5px) brightness(1.5);
+    }
+    75% { 
+      opacity: 0.35; 
+      transform: scale(1.1) rotate(270deg);
+      filter: blur(1px) brightness(1.2);
+    }
+  }
+  
+  .ember-particle {
+    animation: flick 2.2s infinite ease-in-out;
+    background: radial-gradient(circle, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 60%, hsl(var(--gold-deep)) 100%);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    box-shadow: 0 0 6px hsl(var(--gold-light) / 0.4);
+  }
+  
+  /* Enhanced hover interactions */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+      0 8px 25px rgba(0, 0, 0, 0.4),
+      0 0 20px hsl(var(--gold) / 0.25),
+      inset 0 1px 0 hsl(var(--gold-light) / 0.2);
+  }
+  
+  /* Premium card styling */
+  .premium-card {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--gold) / 0.15);
+    border-radius: 20px;
+    box-shadow: 
+      inset 0 1px 0 hsl(var(--gold-light) / 0.1),
+      0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .premium-card:hover {
+    border-color: hsl(var(--gold) / 0.25);
+    box-shadow: 
+      inset 0 1px 0 hsl(var(--gold-light) / 0.15),
+      0 8px 30px rgba(0, 0, 0, 0.6),
+      0 0 20px hsl(var(--gold) / 0.2);
+  }
+  
+  /* Enhanced navigation underline */
+  .nav-link {
+    position: relative;
+    transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--gold-light)), hsl(var(--gold)), hsl(var(--gold-deep)));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  /* Navigation underline */
+  .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: hsl(var(--gold));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .smoke-particle,
+    .ember-particle {
+      animation: none !important;
+    }
+    
+    .marble-bg {
+      background-attachment: scroll !important;
+    }
   }
 }

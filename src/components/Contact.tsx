@@ -1,131 +1,159 @@
-import { Phone, MapPin, Clock, Instagram, Facebook, MessageCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
+import { Phone, MessageCircle, Clock, MapPin, Instagram, Facebook } from 'lucide-react';
 
-const Contact = () => {
-  const contactInfo = [
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+357 55 555 555",
-      action: () => window.open("tel:+35755555555", "_self")
-    },
-    {
-      icon: MapPin,
-      label: "Address", 
-      value: "Constantias 11, Paphos 8041",
-      action: () => window.open("https://maps.app.goo.gl/TUmtna2tsh2KAvPE7?g_st=ipc")
-    },
-    {
-      icon: Clock,
-      label: "Hours",
-      value: "Daily 17:00 – 02:00",
-      action: null
-    }
-  ];
+const contactInfo = [
+  {
+    icon: Phone,
+    title: 'Call Us',
+    content: '+357 55 555 555',
+    action: 'tel:+3575555555',
+    actionText: 'Tap to Call'
+  },
+  {
+    icon: MessageCircle,
+    title: 'WhatsApp',
+    content: 'Quick reservations',
+    action: 'https://wa.me/3575555555?text=Hello%20Caliente',
+    actionText: 'Message Us'
+  },
+  {
+    icon: Clock,
+    title: 'Opening Hours',
+    content: 'Daily 17:00 – 02:00',
+    action: null,
+    actionText: null
+  },
+  {
+    icon: MapPin,
+    title: 'Location',
+    content: 'Riviera Ave 21, City Center',
+    action: 'https://maps.google.com/?q=Riviera+Ave+21+City+Center',
+    actionText: 'Open in Maps'
+  }
+];
 
-  const socialLinks = [
-    {
-      icon: Instagram,
-      label: "Instagram",
-      href: "https://www.instagram.com/caliente_shisha_loungebar?igsh=M2x1eGkyZng4dGRz",
-      color: "hover:text-pink-400"
-    },
-    {
-      icon: Facebook, 
-      label: "Facebook",
-      href: "https://www.facebook.com/share/1BFHCWgG97/?mibextid=wwXIfr",
-      color: "hover:text-blue-400"
+const socialLinks = [
+  {
+    icon: Instagram,
+    name: 'Instagram',
+    url: 'https://instagram.com/caliente_lounge',
+    handle: '@caliente_lounge'
+  },
+  {
+    icon: Facebook,
+    name: 'Facebook',
+    url: 'https://facebook.com/caliente.lounge',
+    handle: 'Caliente Lounge'
+  }
+];
+
+export const Contact = () => {
+  const handleContactAction = (action: string | null) => {
+    if (action) {
+      if (action.startsWith('tel:') || action.startsWith('https://wa.me/')) {
+        window.location.href = action;
+      } else {
+        window.open(action, '_blank', 'noopener,noreferrer');
+      }
     }
-  ];
+  };
 
   return (
-    <section id="contact" className="py-20 relative">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold glow-gold mb-6">
-            Visit Caliente
-          </h2>
-          <p className="text-xl text-text-secondary max-w-2xl mx-auto font-body">
-            Unwind, connect, and enjoy shisha, drinks, and good vibes — the perfect place to make every night special.
-          </p>
+    <section id="contact" className="relative py-8 xs:py-10 sm:py-12 md:py-16 lg:py-section">
+      {/* Background with overlay */}
+      <div className="absolute inset-0 marble-bg" />
+      <div className="absolute inset-0 legibility-overlay" />
+      
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 xs:mb-10 sm:mb-12 md:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p className="small-caps mb-4">Contact</p>
+            <h2 className="heading-secondary text-2xl xs:text-3xl sm:text-4xl md:text-5xl mb-4 xs:mb-6 leading-tight">
+              Join Us
+              <br />
+              <span className="text-gold-light">Tonight</span>
+            </h2>
+          </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Information */}
-          <div className="space-y-8 animate-fade-up">
-            {contactInfo.map((item, index) => (
-              <div
-                key={item.label}
-                className="glass rounded-lg p-6 hover-glow transition-all duration-300 cursor-pointer"
-                onClick={item.action || undefined}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                      <item.icon className="w-6 h-6 text-primary" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-primary font-heading">
-                      {item.label}
-                    </h3>
-                    <p className="text-text-secondary font-body">
-                      {item.value}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            {/* Social Links */}
-            <div className="glass rounded-lg p-6">
-              <h3 className="text-xl font-heading font-semibold text-primary mb-4">
-                Connect With Us
-              </h3>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary transition-all duration-300 hover:scale-110 ${social.color}`}
-                  >
-                    <social.icon className="w-6 h-6" />
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Map & Action Buttons */}
-          <div className="space-y-6 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            {/* Map Placeholder */}
-            <div className="glass rounded-lg overflow-hidden h-64 relative">
-              <div className="absolute inset-0 bg-gradient-card flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <p className="text-text-secondary font-body">
-                    Constantias 11, Paphos 8041
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <Button
-              onClick={() => window.open("https://maps.app.goo.gl/TUmtna2tsh2KAvPE7?g_st=ipc", "_blank")}
-              variant="outline"
-              className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold py-3 hover-glow transition-all duration-300"
+        {/* Contact Cards */}
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 sm:gap-6 md:gap-8 mb-8 xs:mb-10 sm:mb-12 md:mb-16">
+          {contactInfo.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="premium-card text-center hover-lift p-3 xs:p-4 sm:p-6"
             >
-              <MapPin className="w-5 h-5 mr-2" />
-              Open in Maps
-            </Button>
-          </div>
+              <div className="text-gold-light mb-4 flex justify-center">
+                <item.icon size={32} />
+              </div>
+              
+              <h3 className="heading-secondary text-base xs:text-lg md:text-xl mb-2">
+                {item.title}
+              </h3>
+              
+              <p className="body-primary text-xs xs:text-sm mb-3 xs:mb-4">
+                {item.content}
+              </p>
+              
+              {item.action && item.actionText && (
+                <button
+                  onClick={() => handleContactAction(item.action)}
+                  className="px-3 xs:px-4 py-2 xs:py-2.5 bg-transparent border border-gold-light text-gold-light hover:bg-gold-light hover:text-black transition-all duration-300 rounded-lg text-xs xs:text-sm font-medium min-h-[44px] xs:min-h-[48px]"
+                >
+                  {item.actionText}
+                </button>
+              )}
+            </motion.div>
+          ))}
         </div>
+
+        {/* Social Media */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <p className="body-primary mb-4 xs:mb-6 text-base xs:text-lg">
+            Follow us for the latest updates and events
+          </p>
+          
+          <div className="flex flex-col xs:flex-row justify-center gap-3 xs:gap-6">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-4 xs:px-6 py-3 premium-card hover-lift transition-all duration-300 group min-h-[48px] w-full xs:w-auto justify-center xs:justify-start"
+              >
+                <social.icon 
+                  size={24} 
+                  className="text-gold-light group-hover:scale-110 transition-transform" 
+                />
+                <div className="text-left">
+                  <div className="heading-secondary text-sm">
+                    {social.name}
+                  </div>
+                  <div className="body-primary text-xs">
+                    {social.handle}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 };
-
-export default Contact;

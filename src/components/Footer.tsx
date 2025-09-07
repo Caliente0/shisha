@@ -1,67 +1,62 @@
-import { Instagram, Facebook, MessageCircle, Clock, MapPin } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const Footer = () => {
+export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-
-
   return (
-    <footer className="relative py-16 border-t border-primary/20">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 items-start">
-          {/* Brand */}
-          <div className="text-center md:text-left">
-            <h3 className="text-3xl font-heading font-bold glow-gold mb-4">
-              Caliente
-            </h3>
-            <p className="text-text-secondary font-body mb-4">
-              Premium shishas • Signature cocktails
-            </p>
-            <p className="text-text-muted font-body italic">
-              Gold warmth • Golden nights
-            </p>
-          </div>
-
-          {/* Hours & Location */}
-          <div className="text-center">
-            <div className="glass rounded-lg p-6 mb-4">
-              <div className="flex items-center justify-center space-x-2 mb-3">
-                <Clock className="w-5 h-5 text-primary" />
-                <span className="text-primary font-heading font-semibold">
-                  Opening Hours
-                </span>
-              </div>
-              <p className="text-text-secondary font-body">
-                Daily 17:00 – 02:00
-                  (Monday Closed)
-              </p>
-            </div>
-
-          </div>
-
-        
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-primary/10 text-center">
-          <p className="text-text-muted font-body text-sm">
-            © {currentYear} Caliente Shisha • Lounge • Bar. All rights reserved.
+    <footer className="relative bg-black/90 py-8 md:py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          {/* Logo */}
+          <h3 className="font-heading font-bold text-2xl md:text-3xl text-gold-light mb-4">
+            Caliente
+          </h3>
+          
+          {/* Tagline */}
+          <p className="body-primary mb-6 max-w-md mx-auto">
+            Where luxury meets tradition. Premium shishas, signature cocktails, golden nights.
           </p>
-          <div className="mt-2 flex items-center justify-center space-x-2">
-            <div className="w-1 h-1 bg-primary rounded-full opacity-60"></div>
-            <span className="text-xs text-text-muted font-body">
-              Crafted with passion by HexaDev Team.
-            </span>
-            <div className="w-1 h-1 bg-primary rounded-full opacity-60"></div>
+          
+          {/* Quick Links */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8 text-sm">
+            {['Home', 'About', 'Gallery', 'Menu', 'Contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => {
+                  const element = document.getElementById(item.toLowerCase());
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="text-white/60 hover:text-gold-light transition-colors"
+              >
+                {item}
+              </button>
+            ))}
           </div>
-        </div>
+          
+          {/* Divider */}
+          <div className="w-24 h-px bg-gold-light/30 mx-auto mb-6" />
+          
+          {/* Contact Info */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-6 text-sm body-primary">
+            <span>Daily 17:00 – 02:00</span>
+            <span className="hidden sm:block">•</span>
+            <span>+357 55 555 555</span>
+            <span className="hidden sm:block">•</span>
+            <span>Riviera Ave 21, City Center</span>
+          </div>
+          
+          {/* Copyright */}
+          <p className="text-white/40 text-xs">
+            © {currentYear} Caliente Lounge. All rights reserved.
+          </p>
+        </motion.div>
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-8 left-8 w-2 h-2 bg-primary rounded-full shadow-ember animate-pulse opacity-40"></div>
-      <div className="absolute bottom-8 right-8 w-1.5 h-1.5 bg-primary-glow rounded-full shadow-ember animate-pulse opacity-30 delay-1000"></div>
     </footer>
   );
 };
-
-export default Footer;

@@ -1,150 +1,73 @@
-# Caliente - Premium Shisha Lounge & Bar
+# Welcome to your Lovable project
 
-A luxury shisha bar website featuring dark marble aesthetics, gold accents, and premium user experience.
+## Project info
 
-## 🌟 Features
+**URL**: https://lovable.dev/projects/3f31b4ec-a696-4951-84dc-24ccbd751145
 
-- **Luxury Design**: Dark marble background with elegant gold accents
-- **Premium Effects**: Glassmorphism cards, gold glow effects, subtle smoke animations
-- **Responsive Layout**: Mobile-first design that scales beautifully on all devices
-- **Interactive Gallery**: Lightbox gallery with smooth navigation
-- **Premium Menu**: Showcase of signature shishas and cocktails
-- **Contact Integration**: Direct phone, WhatsApp, and maps integration
-- **SEO Optimized**: Complete meta tags, structured data, and social sharing
+## How can I edit this code?
 
-## 🚀 Quick Start
+There are several ways of editing your application.
 
-### Prerequisites
-- Node.js 18+ and npm (install with [nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
+**Use Lovable**
 
-### Installation
-```bash
-# Clone the repository
+Simply visit the [Lovable Project](https://lovable.dev/projects/3f31b4ec-a696-4951-84dc-24ccbd751145) and start prompting.
+
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
 
-# Navigate to project directory
-cd caliente-shisha-bar
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-# Install dependencies
-npm install
+# Step 3: Install the necessary dependencies.
+npm i
 
-# Start development server
+# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-### Build for Production
-```bash
-# Create production build
-npm run build
+**Edit a file directly in GitHub**
 
-# Preview production build locally
-npm run preview
-```
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-## 🎨 Design System
+**Use GitHub Codespaces**
 
-### Colors
-- **Primary Gold**: `#9e8123` - Main brand color
-- **Background**: Deep charcoal/black tones
-- **Text**: White with various opacity levels (95%, 75%, 65%)
-- **Glass Effects**: Semi-transparent surfaces with gold borders
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-### Typography  
-- **Headings**: Playfair Display (serif, elegant)
-- **Body Text**: Inter (modern, clean)
+## What technologies are used for this project?
 
-### Effects
-- **Gold Glow**: Text shadows and box shadows using primary gold
-- **Glassmorphism**: Blurred backgrounds with subtle borders
-- **Smoke Animation**: Subtle background movement
-- **Ember Particles**: Small glowing dots with random animation
+This project is built with:
 
-## 📱 Sections
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-1. **Hero** - Main landing with call-to-action buttons
-2. **About** - Three feature cards highlighting key offerings
-3. **Gallery** - Interactive image gallery with lightbox
-4. **Menu** - Premium shishas and cocktails with pricing
-5. **Contact** - Location, hours, phone, and social links
-6. **Footer** - Brand information and links
+## How can I deploy this project?
 
-## 🛠 Tech Stack
+Simply open [Lovable](https://lovable.dev/projects/3f31b4ec-a696-4951-84dc-24ccbd751145) and click on Share -> Publish.
 
-- **React 18** - UI framework
-- **Vite** - Build tool and dev server
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Utility-first styling
-- **Shadcn/UI** - Premium component library
-- **Lucide React** - Beautiful icons
-- **TanStack Query** - Server state management
+## Can I connect a custom domain to my Lovable project?
 
-## 📞 Contact Information
+Yes, you can!
 
-- **Phone**: +357 55 555 555
-- **Address**: Riviera Ave 21, City Center
-- **Hours**: Daily 17:00 – 02:00
-- **WhatsApp**: [Direct Link](https://wa.me/3575555555?text=Hello%20Caliente)
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-## 🚀 Deployment
-
-### Netlify/Vercel (Recommended)
-1. Connect your Git repository
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-4. Deploy automatically on push
-
-### Manual Deployment
-```bash
-npm run build
-# Upload the contents of 'dist' folder to your hosting provider
-```
-
-## 🔧 Customization
-
-### Adding Menu Items
-Edit the `menuItems` array in `src/components/Menu.tsx`:
-
-```javascript
-const menuItems = [
-  {
-    id: 1,
-    name: "Your Shisha",
-    description: "Description here",
-    price: "€20",
-    tag: "New", // "Signature", "New", "Classic", "Premium"
-    category: "shisha" // or "cocktail"
-  }
-];
-```
-
-### Gallery Images
-Update the `galleryImages` array in `src/components/Gallery.tsx` or create a `public/data/gallery.json` file.
-
-### Design System
-Modify colors and effects in:
-- `src/index.css` - CSS custom properties
-- `tailwind.config.ts` - Tailwind configuration
-
-## 📈 Performance
-
-- **Images**: WebP format with lazy loading
-- **Fonts**: Google Fonts with display=swap
-- **Bundle**: Optimized with Vite tree-shaking
-- **Lighthouse Targets**: 95+ Performance, 100 Accessibility/SEO
-
-## 🎯 SEO Features
-
-- Complete meta tags for social sharing
-- Structured data for local business
-- Semantic HTML markup
-- Optimized images with alt text
-- Mobile-friendly design
-- Fast loading performance
-
-## 📄 License
-
-Built for Caliente Shisha Lounge & Bar. All rights reserved.
-
----
-
-*Gold warmth • Golden nights* ✨
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
