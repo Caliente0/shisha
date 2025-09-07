@@ -48,7 +48,7 @@ export const Footer = () => {
             <span className="hidden sm:block">•</span>
             <span>+357 55 555 555</span>
             <span className="hidden sm:block">•</span>
-            <span>Riviera Ave 21, City Center</span>
+            <span>Constantias 11, Paphos 8041</span>
           </div>
           
           {/* Copyright */}

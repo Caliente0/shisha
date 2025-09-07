@@ -34,9 +34,8 @@ export const Hero = () => {
           className="mb-6 xs:mb-8"
         >
           <h1 className="heading-primary text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-4 xs:mb-6 sm:mb-8 leading-tight sm:leading-none">
-            Ignite the Night
+            Caliente Lounge & Shisha Bar.
             <br />
-            at Caliente
           </h1>
         </motion.div>
         
@@ -46,7 +45,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="body-primary text-lg xs:text-xl sm:text-xl md:text-2xl lg:text-3xl mb-8 sm:mb-10 max-w-3xl mx-auto font-medium"
         >
-          Premium shishas, signature cocktails, golden nights.
+          Premium shishas, signature cocktails, Bold flavors.
         </motion.p>
         
         <motion.div

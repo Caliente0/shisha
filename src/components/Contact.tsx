@@ -10,24 +10,17 @@ const contactInfo = [
     actionText: 'Tap to Call'
   },
   {
-    icon: MessageCircle,
-    title: 'WhatsApp',
-    content: 'Quick reservations',
-    action: 'https://wa.me/3575555555?text=Hello%20Caliente',
-    actionText: 'Message Us'
-  },
-  {
     icon: Clock,
     title: 'Opening Hours',
-    content: 'Daily 17:00 – 02:00',
+    content: 'Daily 17:00 – 02:00 (Monday Closed)',
     action: null,
     actionText: null
   },
   {
     icon: MapPin,
     title: 'Location',
-    content: 'Riviera Ave 21, City Center',
-    action: 'https://maps.google.com/?q=Riviera+Ave+21+City+Center',
+    content: 'Constantias 11, Paphos 8041',
+    action: 'https://maps.app.goo.gl/X2c8TgfAVJ8zJzNbA?g_st=ipc',
     actionText: 'Open in Maps'
   }
 ];
@@ -36,14 +29,14 @@ const socialLinks = [
   {
     icon: Instagram,
     name: 'Instagram',
-    url: 'https://instagram.com/caliente_lounge',
-    handle: '@caliente_lounge'
+    url: 'https://www.instagram.com/caliente_shisha_loungebar?igsh=M2x1eGkyZng4dGRz',
+    handle: '@caliente_shisha_loungebar'
   },
   {
     icon: Facebook,
     name: 'Facebook',
-    url: 'https://facebook.com/caliente.lounge',
-    handle: 'Caliente Lounge'
+    url: 'https://www.facebook.com/share/16uNT6gZBt/?mibextid=wwXIfr',
+    handle: 'Caliente Shisha Bar'
   }
 ];
 

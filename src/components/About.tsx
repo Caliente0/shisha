@@ -35,9 +35,8 @@ export const About = () => {
           >
             <p className="small-caps mb-4 sm:mb-6">About Caliente</p>
             <h2 className="heading-secondary text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 xs:mb-6 sm:mb-8 leading-tight">
-              Where Luxury Meets
+              The Heart of Flavor & Atmosphere
               <br />
-              <span className="text-gold-light">Tradition</span>
             </h2>
           </motion.div>
           
@@ -48,9 +47,10 @@ export const About = () => {
             viewport={{ once: true }}
             className="body-primary text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed px-2"
           >
-            Step into a world where marble elegance meets golden warmth. 
-            Caliente offers an unparalleled shisha lounge experience, blending 
-            premium hookah culture with sophisticated cocktail craftsmanship.
+            At Caliente Lounge & Shisha Bar, we bring together great vibes, unique flavors, and unforgettable nights. 
+            Our lounge is designed to be a place where friends gather, conversations flow, and the atmosphere keeps you coming back.
+            We specialize in premium shisha, crafted cocktails, and a menu that blends comfort with creativity. Whether you’re here to relax after 
+            a long day, celebrate with friends, or enjoy live entertainment, Caliente is the spot for you!
           </motion.p>
         </div>
         
