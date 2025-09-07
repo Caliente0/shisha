@@ -75,7 +75,8 @@ export const Contact = () => {
         </div>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 sm:gap-6 md:gap-8 mb-8 xs:mb-10 sm:mb-12 md:mb-16">
+        <div className="flex justify-center mb-8 xs:mb-10 sm:mb-12 md:mb-16">
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 md:gap-8 max-w-4xl">
           {contactInfo.map((item, index) => (
             <motion.div
               key={item.title}
@@ -107,6 +108,7 @@ export const Contact = () => {
               )}
             </motion.div>
           ))}
+          </div>
         </div>
 
         {/* Social Media */}
