@@ -89,24 +89,38 @@
   /* Enhanced marble background with gold grain */
   .marble-bg {
     background-image: url('/marble.jpg');
-    background-position: center 25%;
-    background-size: 140%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
   }
   
+  /* Mobile optimizations */
   @media (max-width: 768px) {
     .marble-bg {
       background-attachment: scroll;
-      background-size: 180%;
-      background-position: center 20%;
+      background-size: cover;
+      background-position: center center;
+      /* Ensure background covers the entire viewport */
+      min-height: 100vh;
     }
   }
   
   @media (max-width: 480px) {
     .marble-bg {
-      background-size: 200%;
-      background-position: center 15%;
+      background-size: cover;
+      background-position: center center;
+      /* Better mobile positioning */
+      background-position-y: 30%;
+    }
+  }
+  
+  /* Extra small screens */
+  @media (max-width: 360px) {
+    .marble-bg {
+      background-size: cover;
+      background-position: center 25%;
     }
   }
   
@@ -127,6 +141,26 @@
   /* Legibility film */
   .legibility-overlay {
     background: rgba(8, 8, 8, 0.55);
+  }
+  
+  /* Mobile-specific background fixes */
+  @media (max-width: 768px) {
+    .legibility-overlay {
+      background: rgba(8, 8, 8, 0.65);
+    }
+    
+    /* Ensure sections have proper background coverage */
+    section {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+  
+  /* Fix for iOS Safari background issues */
+  @supports (-webkit-touch-callout: none) {
+    .marble-bg {
+      background-attachment: scroll;
+    }
   }
 }
 
@@ -202,71 +236,6 @@
     color: hsl(var(--gold));
   }
   
-  /* Enhanced smoke animation - more visible */
-  @keyframes drift {
-    0% { 
-      transform: translate3d(-6%, 3%, 0) scale(1) rotate(0deg);
-      opacity: 0.12;
-    }
-    25% { 
-      transform: translate3d(2%, -2%, 0) scale(1.05) rotate(1deg);
-      opacity: 0.18;
-    }
-    50% { 
-      transform: translate3d(4%, -4%, 0) scale(1.12) rotate(-1deg);
-      opacity: 0.16;
-    }
-    75% { 
-      transform: translate3d(-2%, 1%, 0) scale(0.98) rotate(0.5deg);
-      opacity: 0.14;
-    }
-    100% { 
-      transform: translate3d(-6%, 3%, 0) scale(1) rotate(0deg);
-      opacity: 0.12;
-    }
-  }
-  
-  .smoke-particle {
-    animation: drift 28s ease-in-out infinite;
-    filter: blur(12px) contrast(1.2);
-    background: radial-gradient(circle, hsl(var(--white) / 0.16) 0%, hsl(var(--gold-light) / 0.08) 70%, transparent 100%);
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-  }
-  
-  /* Enhanced golden ember flickers */
-  @keyframes flick {
-    0%, 100% { 
-      opacity: 0.2; 
-      transform: scale(1) rotate(0deg);
-      filter: blur(1.5px) brightness(1);
-    }
-    25% { 
-      opacity: 0.45; 
-      transform: scale(1.2) rotate(90deg);
-      filter: blur(1px) brightness(1.3);
-    }
-    50% { 
-      opacity: 0.6; 
-      transform: scale(1.4) rotate(180deg);
-      filter: blur(0.5px) brightness(1.5);
-    }
-    75% { 
-      opacity: 0.35; 
-      transform: scale(1.1) rotate(270deg);
-      filter: blur(1px) brightness(1.2);
-    }
-  }
-  
-  .ember-particle {
-    animation: flick 2.2s infinite ease-in-out;
-    background: radial-gradient(circle, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 60%, hsl(var(--gold-deep)) 100%);
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    box-shadow: 0 0 6px hsl(var(--gold-light) / 0.4);
-  }
   
   /* Enhanced hover interactions */
   .hover-lift {
@@ -351,11 +320,6 @@
   }
   
   @media (prefers-reduced-motion: reduce) {
-    .smoke-particle,
-    .ember-particle {
-      animation: none !important;
-    }
-    
     .marble-bg {
       background-attachment: scroll !important;
     }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { animationVariants } from '@/lib/animations';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -58,8 +59,7 @@ export const Navbar = () => {
           <div className="flex items-center justify-between h-nav">
             {/* Logo */}
             <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              {...animationVariants.slideInLeft}
               className="flex-shrink-0"
             >
               <h1 className="text-2xl sm:text-3xl font-heading font-bold text-gold-light">
@@ -105,16 +105,13 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        <motion.div
-          className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ 
-            opacity: isOpen ? 1 : 0, 
-            height: isOpen ? 'auto' : 0 
-          }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/95 backdrop-blur-lg border-t border-gold-light/20 marble-bg marble-grain">
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className="md:hidden"
+              {...animationVariants.mobileMenu}
+            >
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/95 backdrop-blur-lg border-t border-gold-light/20">
             <div className="absolute inset-0 bg-black/85" />
             {navItems.map((item) => (
               <button
@@ -130,7 +127,9 @@ export const Navbar = () => {
               </button>
             ))}
           </div>
-        </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
       
       {/* Spacer for fixed nav */}

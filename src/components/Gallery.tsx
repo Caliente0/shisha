@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { animationVariants, viewportSettings, getStaggerDelay } from '@/lib/animations';
 
 interface GalleryItem {
   src: string;
@@ -83,10 +84,9 @@ export const Gallery = () => {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 md:mb-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            {...animationVariants.fadeInUp}
+            whileInView={animationVariants.fadeInUp.animate}
+            viewport={viewportSettings}
           >
             <p className="small-caps mb-6">Gallery</p>
             <h2 className="heading-secondary text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 sm:mb-8">
@@ -97,14 +97,18 @@ export const Gallery = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+        <motion.div 
+          className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8"
+          variants={animationVariants.staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={viewportSettings}
+        >
             {images.map((image, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                variants={animationVariants.scaleIn}
+                transition={{ delay: getStaggerDelay(index, 0.1) }}
                 className="aspect-square overflow-hidden rounded-2xl cursor-pointer premium-card hover-lift group"
                 onClick={() => openLightbox(index)}
               >
@@ -116,7 +120,7 @@ export const Gallery = () => {
                 />
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -124,9 +128,7 @@ export const Gallery = () => {
       <AnimatePresence>
         {selectedImage !== null && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            {...animationVariants.lightbox}
             className="fixed inset-0 bg-black/97 z-50 flex items-center justify-center p-4"
             onClick={closeLightbox}
           >
@@ -164,9 +166,7 @@ export const Gallery = () => {
 
             {/* Image */}
             <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
+              {...animationVariants.lightboxContent}
               className="max-w-full max-h-full"
               onClick={(e) => e.stopPropagation()}
             >

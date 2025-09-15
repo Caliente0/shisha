@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { SmokeEffect } from './SmokeEffect';
+import { animationVariants, viewportSettings } from '@/lib/animations';
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -10,7 +10,7 @@ export const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 xs:pt-24 sm:pt-0">
+    <section id="home" className="relative min-h-screen overflow-hidden">
       <div className="absolute inset-0 marble-bg" />
       
       {/* Gold grain overlay */}
@@ -22,59 +22,58 @@ export const Hero = () => {
       {/* Legibility Overlay */}
       <div className="absolute inset-0 legibility-overlay" />
       
-      {/* Smoke Effect */}
-      <SmokeEffect />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full pt-16 xs:pt-20 sm:pt-0">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-6 xs:mb-8"
+          {...animationVariants.heroTitle}
+          whileInView={animationVariants.heroTitle.animate}
+          viewport={viewportSettings}
+          className="mb-4 xs:mb-6 sm:mb-8"
         >
-          <h1 className="heading-primary text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-4 xs:mb-6 sm:mb-8 leading-tight sm:leading-none">
+          <h1 className="heading-primary text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-3 xs:mb-4 sm:mb-6 leading-tight text-center">
             Caliente Lounge & Shisha Bar.
-            <br />
           </h1>
         </motion.div>
         
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="body-primary text-lg xs:text-xl sm:text-xl md:text-2xl lg:text-3xl mb-8 sm:mb-10 max-w-3xl mx-auto font-medium"
+          {...animationVariants.heroSubtitle}
+          whileInView={animationVariants.heroSubtitle.animate}
+          viewport={viewportSettings}
+          className="body-primary text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 xs:mb-8 sm:mb-10 max-w-4xl mx-auto font-medium text-center px-2"
         >
           Premium shishas, signature cocktails, Bold flavors.
         </motion.p>
         
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col xs:flex-row gap-4 sm:gap-6 justify-center items-center"
+          {...animationVariants.heroButtons}
+          whileInView={animationVariants.heroButtons.animate}
+          viewport={viewportSettings}
+          className="flex flex-col xs:flex-row gap-3 xs:gap-4 sm:gap-6 justify-center items-center w-full"
         >
           <button
             onClick={() => scrollToSection('gallery')}
-            className="w-full xs:w-auto px-6 xs:px-8 sm:px-10 py-3 xs:py-4 sm:py-5 bg-transparent border-2 border-gold-light text-gold-light hover-lift gold-glow-subtle font-semibold text-base xs:text-lg sm:text-xl rounded-full transition-all duration-300 min-h-[48px] min-w-[160px] xs:min-w-[180px] sm:min-w-[200px]"
+            className="w-full xs:w-auto px-4 xs:px-6 sm:px-8 py-3 xs:py-4 sm:py-5 bg-transparent border-2 border-gold-light text-gold-light hover-lift gold-glow-subtle font-semibold text-sm xs:text-base sm:text-lg rounded-full transition-all duration-300 min-h-[44px] xs:min-h-[48px] max-w-[280px] xs:max-w-none"
           >
             View Gallery
           </button>
           
           <button
-            onClick={() => scrollToSection('contact')}
-            className="w-full xs:w-auto px-6 xs:px-8 sm:px-10 py-3 xs:py-4 sm:py-5 gold-metallic text-black hover-lift font-semibold text-base xs:text-lg sm:text-xl rounded-full transition-all duration-300 min-h-[48px] min-w-[160px] xs:min-w-[180px] sm:min-w-[200px]"
+            onClick={() => scrollToSection('menu')}
+            className="w-full xs:w-auto px-4 xs:px-6 sm:px-8 py-3 xs:py-4 sm:py-5 gold-metallic text-black hover-lift font-semibold text-sm xs:text-base sm:text-lg rounded-full transition-all duration-300 min-h-[44px] xs:min-h-[48px] max-w-[280px] xs:max-w-none"
           >
-            Contact Us
+            View Menu
           </button>
         </motion.div>
+        </div>
       </div>
       
       {/* Scroll indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        {...animationVariants.scrollIndicator}
+        whileInView={animationVariants.scrollIndicator.animate}
+        viewport={viewportSettings}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <div className="w-6 h-10 border-2 border-gold-light/50 rounded-full p-1">
