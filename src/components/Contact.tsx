@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Phone, MessageCircle, Clock, MapPin, Instagram, Facebook } from 'lucide-react';
-import { animationVariants, viewportSettings, getStaggerDelay } from '@/lib/animations';
 
 const contactInfo = [
   {
@@ -13,7 +12,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: 'Opening Hours',
-    content: 'Daily 17:00 – 02:00 (Monday Closed)',
+    content: 'Daily 17:00 – 02:00',
     action: null,
     actionText: null
   },
@@ -61,10 +60,10 @@ export const Contact = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 xs:mb-10 sm:mb-12 md:mb-16">
           <motion.div
-            initial={animationVariants.fadeInUp.initial}
-            whileInView={animationVariants.fadeInUp.animate}
-            viewport={viewportSettings}
-            transition={animationVariants.fadeInUp.transition}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
             <p className="small-caps mb-4">Contact</p>
             <h2 className="heading-secondary text-2xl xs:text-3xl sm:text-4xl md:text-5xl mb-4 xs:mb-6 leading-tight">
@@ -77,18 +76,14 @@ export const Contact = () => {
 
         {/* Contact Cards */}
         <div className="flex justify-center mb-8 xs:mb-10 sm:mb-12 md:mb-16">
-          <motion.div 
-            className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 md:gap-8 max-w-4xl"
-            variants={animationVariants.staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={viewportSettings}
-          >
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 md:gap-8 max-w-4xl">
           {contactInfo.map((item, index) => (
             <motion.div
               key={item.title}
-              variants={animationVariants.staggerItem}
-              transition={{ delay: getStaggerDelay(index, 0.1) }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
               className="premium-card text-center hover-lift p-3 xs:p-4 sm:p-6"
             >
               <div className="text-gold-light mb-4 flex justify-center">
@@ -113,15 +108,15 @@ export const Contact = () => {
               )}
             </motion.div>
           ))}
-          </motion.div>
+          </div>
         </div>
 
         {/* Social Media */}
         <motion.div
-          initial={animationVariants.fadeInUpDelayed.initial}
-          whileInView={animationVariants.fadeInUpDelayed.animate}
-          viewport={viewportSettings}
-          transition={animationVariants.fadeInUpDelayed.transition}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
           className="text-center"
         >
           <p className="body-primary mb-4 xs:mb-6 text-base xs:text-lg">
