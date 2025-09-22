@@ -57,7 +57,7 @@ export const Footer = () => {
         href="https://hexadev-web.com"
         target="_blank"
         rel="noopener noreferrer"
-        style={{ textDecoration: "none", color: "blue", fontWeight: "bold" }}
+        style={{ textDecoration: "none", color: "gold", fontWeight: "bold" }}
       >
         HexaDev
       </a>{" "}
