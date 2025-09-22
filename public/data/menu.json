@@ -137,9 +137,9 @@
     {
       "name": "Salads",
       "items": [
-        { "name": "Wakame Salad", "tag": "Healthy", "price": "€8.50", "desc": "Chuka • Salad mix • Lemon • Sesame • Nut sauce • Cherry tomatoes", "image": "/placeholder.svg" },
-        { "name": "Salmon Salad", "tag": "Premium", "price": "€12.90", "desc": "Salmon • Japanese mayonnaise • Oyster sauce • Sriracha • Wasabi • Tobiko • Salad mix • Honey mustard sauce • Caviar • Bloom • Carrot flowers", "image": "/placeholder.svg" },
-        { "name": "Octopus Salad", "tag": "Exotic", "price": "€12.90", "desc":""}
+        { "name": "Wakame Salad", "tag": "Healthy", "price": "€8.50", "desc": "Chuka • Salad Mix • Lemon • Sesame • Nut sauce • Cherry tomatoes", "image": "/placeholder.svg" },
+        { "name": "Salmon Salad", "tag": "Premium", "price": "€12.90", "desc": "Salad Mix • Cherry tomatoes • Olives • Potato • Capers • Microgreen radish • Salmon • Dressing", "image": "/placeholder.svg" },
+        { "name": "Octopus Salad", "tag": "Exotic", "price": "€12.90", "desc":"Salad Mix • Cherry tomatoes • Olives • Potato • Capers • Microgreen radish • Octopus • Dressing"}
       ]
     },
     {
