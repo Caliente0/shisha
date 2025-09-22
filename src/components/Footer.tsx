@@ -49,11 +49,27 @@ export const Footer = () => {
             <span>+357 55 555 555</span>
             <span className="hidden sm:block">•</span>
             <span>Constantias 11, Paphos 8041</span>
+            <span className="hidden sm:block">•</span>
+            <span>
+    <div>
+      Created by{" "}
+      <a
+        href="https://hexadev-web.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "none", color: "blue", fontWeight: "bold" }}
+      >
+        HexaDev
+      </a>{" "}
+      Team
+    </div>
+            </span>
           </div>
           
           {/* Copyright */}
           <p className="text-white/40 text-xs">
             © {currentYear} Caliente Lounge. All rights reserved.
+
           </p>
         </motion.div>
       </div>
