@@ -57,7 +57,8 @@
         { "name": "Banzai", "tag": "Signature", "price": "€13.90", "desc": "Rice • Nori • Philadelphia • Salmon • Avocado • Cucumber • Unagi • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Okinawa", "tag": "Popular", "price": "€12.90", "desc": "Rice • Nori • Philadelphia • Tuna • Cucumber • Avocado • Spicy Mayo • Bonito • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Tokyo", "tag": "Exotic", "price": "€11.90", "desc": "Rice • Nori • Feta • Tomato • Smoked chicken • Green onions • Ginger • Wasabi", "image": "/placeholder.svg" },
-        { "name": "Canada Tempura", "tag": "Premium", "price": "€15", "desc": "Rice • Nori • Philadelphia • Shrimp tempura • Avocado • Unagi • Sesame • Ginger • Wasabi", "image": "/placeholder.svg" }
+        { "name": "Canada Tempura", "tag": "Premium", "price": "€15", "desc": "Rice • Nori • Philadelphia • Shrimp tempura • Avocado • Unagi • Sesame • Ginger • Wasabi", "image": "/placeholder.svg" },
+        {"name": "Fried salmon", "tag": "Signiture", "price": "€14", "desc": "Rice • Nori • Japanese Mayonnaise • Fried Salmon • Cucumber • Ginger • Wasabi", "image": "/placeholder.svg"}
       ]
     },
     {
@@ -68,7 +69,9 @@
         { "name": "California with Salmon", "tag": "Popular", "price": "€13.90", "desc": "Rice • Nori • Salmon • Japanese mayonnaise • Cucumber • Avocado • Tobiko • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Futomaki", "tag": "Premium", "price": "€14.50", "desc": "Rice • Nori • Avocado • Salmon • Tuna • Japanese mayonnaise • Onion • Ikura • Tobiko • Ginger • Wasabi", "image": "/placeholder.svg" },
         {"name": "Alaska", "tag": "Classic", "price": "€11.90", "desc": "Rice • Nori • Philadelphia • Salmon • Cucumber • Sesame • Ginger • Wasabi", "image": "/placeholder.svg"},
-        {"name": "Hokusan", "tag": "Signature", "price": "€13.90", "desc": "Rice • Nori • Philadelphia • Cucumber • Salmon • Srimps • Red Tobiko • Ginger • Wasabi", "image": "/placeholder.svg"}
+        {"name": "Hokusan", "tag": "Signature", "price": "€13.90", "desc": "Rice • Nori • Philadelphia • Cucumber • Salmon • Srimps • Red Tobiko • Ginger • Wasabi", "image": "/placeholder.svg"},
+        {"name": "Salmon Tartar", "tag": "Unique", "price": "€14", "desc": "Rice • Nori • Philadelphia • Cucumber • Salmon Tartar  • Ginger • Wasabi", "image": "/placeholder.svg"},
+        {"name": "Tuna Tartar", "tag": "Premium", "price": "€14", "desc": "Rice • Nori • Philadelphia • Cucumber • Tuna Tartar  • Ginger • Wasabi", "image": "/placeholder.svg"}
       ]
     },
     {
