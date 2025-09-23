@@ -1,39 +1,6 @@
 {
   "categories": [
     {
-      "name": "Shisha",
-      "items": [
-        { "name": "Blue Flame", "tag": "Signature", "price": "€22", "desc": "Citrus mint • icy drip • velvet clouds", "image": "/placeholder.svg" },
-        { "name": "Golden Peach", "tag": "New", "price": "€20", "desc": "Sun-ripe peach • creamy finish", "image": "/placeholder.svg" },
-        { "name": "Midnight Grape", "tag": "Classic", "price": "€18", "desc": "Dark grape • cool mint", "image": "/placeholder.svg" },
-        { "name": "Royal Mix", "tag": "Premium", "price": "€25", "desc": "Exotic blend • double apple • smooth draw", "image": "/placeholder.svg" },
-        { "name": "Citrus Burst", "tag": "Popular", "price": "€19", "desc": "Fresh orange • lemon zest • energizing", "image": "/placeholder.svg" },
-        { "name": "Vanilla Dream", "tag": "Classic", "price": "€18", "desc": "Creamy vanilla • hint of spice • luxurious", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "Cocktails",
-      "items": [
-        { "name": "Caliente Sunset", "tag": "Signature", "price": "€16", "desc": "Tequila • passion fruit • lime • chili rim", "image": "/placeholder.svg" },
-        { "name": "Golden Hour", "tag": "Premium", "price": "€18", "desc": "Whiskey • honey • lemon • gold dust", "image": "/placeholder.svg" },
-        { "name": "Midnight Mojito", "tag": "Classic", "price": "€14", "desc": "Dark rum • mint • lime • soda", "image": "/placeholder.svg" },
-        { "name": "Smoke & Fire", "tag": "Exotic", "price": "€17", "desc": "Mezcal • jalapeño • agave • smoked salt", "image": "/placeholder.svg" },
-        { "name": "Luxury Martini", "tag": "Premium", "price": "€20", "desc": "Premium vodka • vermouth • gold leaf", "image": "/placeholder.svg" },
-        { "name": "Tropical Breeze", "tag": "Refreshing", "price": "€15", "desc": "Rum • coconut • pineapple • mint", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "Drinks",
-      "items": [
-        { "name": "Fresh Lemonade", "tag": "Refreshing", "price": "€6", "desc": "Fresh lemons • mint • sparkling water", "image": "/placeholder.svg" },
-        { "name": "Iced Coffee", "tag": "Classic", "price": "€5", "desc": "Cold brew • cream • vanilla syrup", "image": "/placeholder.svg" },
-        { "name": "Green Tea", "tag": "Healthy", "price": "€4", "desc": "Premium jasmine • hot or iced", "image": "/placeholder.svg" },
-        { "name": "Fresh Juice", "tag": "Natural", "price": "€7", "desc": "Orange • apple • carrot • ginger", "image": "/placeholder.svg" },
-        { "name": "Sparkling Water", "tag": "Pure", "price": "€3", "desc": "Premium sparkling • lemon slice", "image": "/placeholder.svg" },
-        { "name": "Energy Drink", "tag": "Boost", "price": "€5", "desc": "Natural energy • vitamins • no crash", "image": "/placeholder.svg" }
-      ]
-    },
-    {
       "name": "Starters",
       "items": [
         { "name": "Shrimps Chips", "tag": "Exotic", "price": "€4", "desc": "", "image": "/placeholder.svg"},

@@ -27,11 +27,9 @@ export const Menu = () => {
     fetch('/data/menu.json')
       .then(res => res.json())
       .then(data => {
-        // Filter out sushi-related categories for main page
-        const filteredCategories = data.categories.filter(category => 
-          ['Shisha', 'Cocktails', 'Drinks'].includes(category.name)
-        );
-        setMenuData({ categories: filteredCategories });
+        // Show only the first 3 categories for the main page preview
+        const previewCategories = data.categories.slice(0, 3);
+        setMenuData({ categories: previewCategories });
         setLoading(false);
       })
       .catch(err => {
