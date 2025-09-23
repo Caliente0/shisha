@@ -3,15 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "npm@11.4.2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "vite preview --port $PORT",
-    "railway:build": "npm ci && npm run build",
-    "railway:start": "npm run start"
+    "start": "vite preview --port $PORT"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
