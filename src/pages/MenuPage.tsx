@@ -75,7 +75,7 @@ export const MenuPage = () => {
             className="text-center mb-8 xs:mb-10 sm:mb-12"
           >
             <p className="small-caps mb-6">Complete Menu</p>
-            <h1 className="heading-secondary text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 xs:mb-8 leading-tight">
+            <h1 className="heading-secondary text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 xs:mb-8 leading-normal">
               Full
               <br />
               <span className="text-gold-light">Menu</span>

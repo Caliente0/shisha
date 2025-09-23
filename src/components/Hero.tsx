@@ -30,9 +30,9 @@ export const Hero = () => {
           {...animationVariants.heroTitle}
           whileInView={animationVariants.heroTitle.animate}
           viewport={viewportSettings}
-          className="mb-4 xs:mb-6 sm:mb-8"
+          className="mb-4 xs:mb-6 sm:mb-8 pb-4"
         >
-          <h1 className="heading-primary text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-3 xs:mb-4 sm:mb-6 leading-tight text-center">
+          <h1 className="heading-primary text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-3 xs:mb-4 sm:mb-6 leading-normal text-center pb-2">
             Caliente Lounge & Shisha Bar.
           </h1>
         </motion.div>
