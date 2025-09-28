@@ -5,7 +5,7 @@
       "items": [
         { "name": "Shrimps Chips", "tag": "Exotic", "price": "€4", "desc": "", "image": "/placeholder.svg"},
         { "name": "Shrimp Tempura", "tag": "Popular", "price": "€10", "desc": "Crunchy Shrimps / 6pcs", "image": "/placeholder.svg" },
-        { "name": "Bao - Bans Shrimps ", "tag": "Exotic", "price": "€11.90", "desc": "Baobans bun • Spicy mayo • Cucumber • Avocado • Korean carrot • Microgreen peas • Sesame seeds • Srimp chips / 3pcs", "image": "/placeholder.svg" },
+        { "name": "Bao - Bans Shrimps", "tag": "Exotic", "price": "€11.90", "desc": "Baobans bun • Spicy mayo • Cucumber • Avocado • Korean carrot • Microgreen peas • Sesame seeds • Srimp chips / 3pcs", "image": "/placeholder.svg" },
         { "name": "Spring rolls", "tag": "Premium", "price": "€8", "desc": "Spring rolls Kim Chi / Spring rolls Vega / 5pcs + Spring rolls sauce", "image": "/placeholder.svg" },
         { "name": "Salmon Pokebowl", "tag": "Signature", "price": "€16", "desc": "Rice • Cucumber • Avocado • Edomami • Wakame • Cherry tomatoes • Korean Carrots • Salmon Tartar • Pokeball Sauce • Dried Chili Peppers • Microgreen Radish", "image": "/placeholder.svg" }
       ]
@@ -24,8 +24,7 @@
         { "name": "Banzai", "tag": "Signature", "price": "€13.90", "desc": "Rice • Nori • Fila • Cucumber • Avocado • Eel • Salmon • Breading • Unagi sauce • Sesame • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Okinawa", "tag": "Popular", "price": "€12.90", "desc": "Rice • Nori • Philadelphia • Tuna • Cucumber • Avocado • Breading • Spicy Mayo • Bonito • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Tokyo", "tag": "Exotic", "price": "€11.90", "desc": "Rice • Nori • Feta • Tomato • Smoked chicken • Green onions • Breading • Spicy Mayo • Ginger • Wasabi", "image": "/placeholder.svg" },
-        { "name": "Canada Tempura", "tag": "Premium", "price": "€15", "desc": "Rice • Nori • Philadelphia • Shrimp tempura • Avocado•  Breading • Unagi • Sesame • Ginger • Wasabi", "image": "/placeholder.svg" },
-        {"name": "Fried salmon", "tag": "Signiture", "price": "€14", "desc": "Rice • Nori • Japanese Mayonnaise • Fried Salmon • Breading • Cucumber • Sesame • Furikake • Ginger • Wasabi ", "image": "/placeholder.svg"}
+        { "name": "Canada Tempura", "tag": "Premium", "price": "€15", "desc": "Rice • Nori • Philadelphia • Shrimp tempura • Avocado•  Breading • Unagi • Sesame • Ginger • Wasabi", "image": "/placeholder.svg" }
       ]
     },
     {
@@ -38,7 +37,8 @@
         {"name": "Alaska", "tag": "Classic", "price": "€11.90", "desc": "Rice • Nori • Sesame • Japanese Mayo • Cucumber • Avocado • Salmon • Spicy Mayo • Caviar • Microgreen radish • Ginger • Wasabi", "image": "/placeholder.svg"},
         {"name": "Hokusan", "tag": "Signature", "price": "€13.90", "desc": "Rice • Nori • Philadelphia • Cucumber • Salmon • Srimps • Red Tobiko • Ginger • Wasabi", "image": "/placeholder.svg"},
         {"name": "Salmon Tartar", "tag": "Unique", "price": "€14", "desc": "Rice • Nori • Philadelphia • Cucumber • Salmon Tartar • Green onion • Ginger • Wasabi", "image": "/placeholder.svg"},
-        {"name": "Tuna Tartar", "tag": "Premium", "price": "€14", "desc": "Rice • Nori • Philadelphia • Cucumber • Tuna Tartar • Green onion • Ginger • Wasabi", "image": "/placeholder.svg"}
+        {"name": "Tuna Tartar", "tag": "Premium", "price": "€14", "desc": "Rice • Nori • Philadelphia • Cucumber • Tuna Tartar • Green onion • Ginger • Wasabi", "image": "/placeholder.svg"},
+        {"name": "Fried salmon", "tag": "Signiture", "price": "€14", "desc": "Rice • Nori • Japanese Mayonnaise • Fried Salmon • Breading • Cucumber • Sesame • Furikake • Ginger • Wasabi ", "image": "/placeholder.svg"}
       ]
     },
     {
@@ -60,10 +60,9 @@
       "items": [
         { "name": "Green Dragon", "tag": "Signature", "price": "€12.90", "desc": "Rice • Nori • Philadelphia • Unagi sauce • Avocado • Cucumber • Unagi • Sesame • Chili • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Philadelphia Classic", "tag": "Classic", "price": "€15", "desc": "Rice • Nori • Philadelphia • Cucumber • Avocado • Salmon • Caviar • Ginger • Wasabi", "image": "/placeholder.svg" },
-        { "name": "California", "tag": "Popular", "price": "€20", "desc": "Rice • Nori • Kamchatka crab • Japanese mayonnaise • Cucumber • Tobiko • Ginger • Wasabi", "image": "/placeholder.svg" },
+        { "name": "California", "tag": "Popular", "price": "€20", "desc": "Rice • Nori • Snow crab • Japanese mayonnaise • Cucumber • Tobiko • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Philadelphia Explosion", "tag": "Signature", "price": "€17.50", "desc": "Rice • Nori • Philadelphia • Avocado • Tobiko • Salmon • Unagi sauce • Sesame • Caviar • Ginger • Wasabi", "image": "/placeholder.svg" },
-        { "name": "Emerald Dragon", "tag": "Exotic", "price": "€12.90", "desc": "Rice • Nori • Philadelphia • Cucumber • Yellowtail • Wakame salad • Sesame • Ginger • Wasabi", "image": "/placeholder.svg" },
-        { "name": "Caliente", "tag": "Signuture", "price": "€16.90", "desc": "", "image": "/placeholder.svg"}
+        { "name": "Emerald Dragon", "tag": "Exotic", "price": "€12.90", "desc": "Rice • Nori • Philadelphia • Cucumber • Yellowtail • Wakame salad • Sesame • Ginger • Wasabi", "image": "/placeholder.svg" }
       ]
     },
     {
