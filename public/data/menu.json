@@ -60,8 +60,8 @@
       "items": [
         { "name": "Green Dragon", "tag": "Signature", "price": "€12.90", "desc": "Rice • Nori • Philadelphia • Unagi sauce • Avocado • Cucumber • Unagi • Sesame • Chili • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Philadelphia Classic", "tag": "Classic", "price": "€15", "desc": "Rice • Nori • Philadelphia • Cucumber • Avocado • Salmon • Caviar • Ginger • Wasabi", "image": "/placeholder.svg" },
-        { "name": "California", "tag": "Popular", "price": "€20", "desc": "Rice • Nori • Snow crab • Japanese mayonnaise • Cucumber • Tobiko • Ginger • Wasabi", "image": "/placeholder.svg" },
-        { "name": "Philadelphia Explosion", "tag": "Signature", "price": "€17.50", "desc": "Rice • Nori • Philadelphia • Avocado • Tobiko • Salmon • Unagi sauce • Sesame • Caviar • Ginger • Wasabi", "image": "/placeholder.svg" },
+        { "name": "California", "tag": "Popular", "price": "€20", "desc": "Rice • Nori • Snow crab • Japanese mayonnaise • Cucumber • Red Tobiko • Ginger • Wasabi", "image": "/placeholder.svg" },
+        { "name": "Philadelphia Explosion", "tag": "Signature", "price": "€17.50", "desc": "Rice • Nori • Philadelphia • Avocado • Red Tobiko • Salmon • Unagi sauce • Sesame • Caviar • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Emerald Dragon", "tag": "Exotic", "price": "€12.90", "desc": "Rice • Nori • Philadelphia • Cucumber • Yellowtail • Wakame salad • Sesame • Ginger • Wasabi", "image": "/placeholder.svg" }
       ]
     },
@@ -82,7 +82,7 @@
       "items": [
         { "name": "Salmon Sashimi", "tag": "Classic", "price": "€13", "desc": "Salmon • Salad mix • Cherry tomatoes • Daikon • Cucumber • Bamboo leaf • Ikura • Caviar • Soy sauce • Pickled ginger • Wasabi • Bloom", "image": "/placeholder.svg" },
         { "name": "Tuna Sashimi", "tag": "Premium", "price": "€13", "desc": "Tuna • Salad mix • Cherry tomatoes • Daikon • Cucumber • Bamboo leaf • Caviar • Soy sauce • Pickled ginger • Wasabi • Bloom", "image": "/placeholder.svg" },
-        { "name": "Shrimp Sashimi", "tag": "Popular", "price": "€10", "desc": "Tiger shrimp • Salad mix • Cherry tomatoes • Daikon • Cucumber • Bamboo leaf • Tobiko • Caviar • Soy sauce • Pickled ginger • Wasabi • Bloom", "image": "/placeholder.svg" },
+        { "name": "Shrimp Sashimi", "tag": "Popular", "price": "€10", "desc": "Tiger shrimp • Salad mix • Cherry tomatoes • Daikon • Cucumber • Bamboo leaf • Red Tobiko • Caviar • Soy sauce • Pickled ginger • Wasabi • Bloom", "image": "/placeholder.svg" },
         { "name": "Scallop Sashimi", "tag": "Premium", "price": "€16", "desc": "Scallop • Salad mix • Cherry tomatoes • Daikon • Cucumber • Bamboo leaf • Ikura • Caviar • Soy sauce • Pickled ginger • Wasabi • Bloom", "image": "/placeholder.svg" },
         { "name": "Yellowtail Sashimi", "tag": "Premium", "price": "€18", "desc": "Yellowtail • Salad mix • Cherry tomatoes • Daikon • Cucumber • Bamboo leaf • Ikura • Caviar • Soy sauce • Pickled ginger • Wasabi • Bloom", "image": "/placeholder.svg" },
         { "name": "Octopus Sashimi", "tag": "Exotic", "price": "€14", "desc": "Octopus • Salad mix • Cherry tomatoes • Daikon • Cucumber • Bamboo leaf • Ikura • Caviar • Soy sauce • Pickled ginger • Wasabi • Bloom", "image": "/placeholder.svg" },
@@ -96,7 +96,7 @@
         { "name": "Tuna Gunkan", "tag": "Classic", "price": "€9", "desc": "Rice • Nori • Tuna • Japanese mayonnaise • Green Onion • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Ikura Gunkan", "tag": "Premium", "price": "€14", "desc": "Rice • Nori • Ikura • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Scallop Gunkan", "tag": "Premium", "price": "€10", "desc": "Rice • Nori • Scallop • Ikura • Cucumber • Red Tobiko • Japanese mayonnaise • Ginger • Wasabi", "image": "/placeholder.svg" },
-        { "name": "Shrimp Gunkan", "tag": "Popular", "price": "€8", "desc": "Rice • Nori • Shrimp • Japanese mayonnaise • Tobiko • Ginger • Wasabi", "image": "/placeholder.svg" },
+        { "name": "Shrimp Gunkan", "tag": "Popular", "price": "€8", "desc": "Rice • Nori • Shrimp • Japanese mayonnaise • Red Tobiko • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Unagi Gunkan", "tag": "Popular", "price": "€10", "desc": "Rice • Nori • Japanese mayonnaise • Unagi • Sesame • Ginger • Wasabi", "image": "/placeholder.svg" },
         { "name": "Crab Gunkan", "tag": "Popular", "price": "€14", "desc": "Rice • Nori • Japanese mayonnaise • Crab • Red Tobiko • Ikura • Ginger • Wasabi", "image": "/placeholder.svg"},
         { "name": "Tobiko Gunkan", "tag": "Popular", "price": "€7", "desc": "Rice • Nori •  Red Tobiko • Ginger • Wasabi", "image": "/placeholder.svg"},
