@@ -143,6 +143,42 @@
       ]
     },
     {
+      "name": "White Wine",
+      "items": [
+        { "name": "Vasilikon Xinisteri", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "Petritis Xinisteri", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "Persefoni Medium", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "Alina Medium", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "Vlassides Sauvignon Blanc", "tag": "", "price": "€26", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "Toókos Chardonnay", "tag": "", "price": "€26", "desc": "(Bottle)", "image": "/placeholder.svg" }
+      ]
+    },
+    {
+      "name": "Red Wine",
+      "items": [
+        { "name": "Vlassides Sauvignon Blanc", "tag": "", "price": "€26", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "Vlassides Merlot", "tag": "", "price": "€28", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "Vlassides Shiraz", "tag": "", "price": "€28", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "Vasilikon Methy", "tag": "", "price": "€29", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "Agios Onoufrios", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "Saint Fotios", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" }
+      ]
+    },
+    {
+      "name": "Rose Wine",
+      "items": [
+        { "name": "Valentina Medium", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "Valentina Medium Small", "tag": "", "price": "€5", "desc": "(Bottle Small)", "image": "/placeholder.svg" }
+      ]
+    },
+    {
+      "name": "Sparkling Wine",
+      "items": [
+        { "name": "Prosecco Millesimato", "tag": "", "price": "€25", "desc": "(Bottle)", "image": "/placeholder.svg" },
+        { "name": "DOC Extra Dry", "tag": "", "price": "€6", "desc": "(By Glass)", "image": "/placeholder.svg" }
+      ]
+    },
+    {
       "name": "Our Dishes",
       "items": [
         { "name": "Shrimps Chips", "tag": "Exotic", "price": "€4", "desc": "", "image": "/placeholder.svg"},
