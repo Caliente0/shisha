@@ -3,9 +3,9 @@
     {
       "name": "Hot Beverages",
       "items": [
-        { "name": "Tea", "tag": "", "price": "€3", "desc": "(choose your geusi)", "image": "/placeholder.svg" },
-        { "name": "Instant Coffee", "tag": "", "price": "€3", "desc": "(Nescafe)", "image": "/placeholder.svg" },
-        { "name": "Espresso Coffee", "tag": "", "price": "€2.50", "desc": "", "image": "/placeholder.svg" },
+        { "name": "Tea", "tag": "", "price": "€3", "desc": "(choose your geusi)", "image": "/tea.jpg" },
+        { "name": "Instant Coffee", "tag": "", "price": "€3", "desc": "(Nescafe)", "image": "/nescafe.jpg" },
+        { "name": "Espresso Coffee", "tag": "", "price": "€2.50", "desc": "", "image": "/espresso.jpg" },
         { "name": "Double Espresso Coffee", "tag": "", "price": "€3.50", "desc": "", "image": "/placeholder.svg" },
         { "name": "Cappuchino", "tag": "", "price": "€3.50", "desc": "", "image": "/placeholder.svg"},
         { "name": "Cypriot Coffee", "tag": "", "price": "€2.50", "desc": "", "image": "/placeholder.svg" },
@@ -21,9 +21,9 @@
     { 
       "name": "Cold Beverages",
       "items": [
-        { "name": "Frappe", "tag": "", "price": "€3.50", "desc": "(Nescafe)", "image": "/placeholder.svg" },
-        { "name": "Freddo Espresso", "tag": "", "price": "€3.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Freddo Cappuchino", "tag": "", "price": "€3.20", "desc": "", "image": "/placeholder.svg" },
+        { "name": "Frappe", "tag": "", "price": "€3.50", "desc": "(Nescafe)", "image": "/frappe.jpg" },
+        { "name": "Freddo Espresso", "tag": "", "price": "€3.50", "desc": "", "image": "/iceesprosso.jpg" },
+        { "name": "Freddo Cappuchino", "tag": "", "price": "€3.20", "desc": "", "image": "/cappucino.jpg" },
         { "name": "Cold Chocolate", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg" },
         { "name": "Fresh Orange Juice", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg" },
         { "name": "Box Juices by glass", "tag": "", "price": "€3.50", "desc": "(Orange, apple, peach, cranberry)", "image": "/placeholder.svg" },
@@ -37,8 +37,8 @@
     {
       "name": "Energy Drinks",
       "items": [
-        { "name": "HELL Classic", "tag": "", "price": "€3.20", "desc": "(can 250ml)", "image": "/placeholder.svg" },
-        { "name": "Red Bull", "tag": "", "price": "€3.50", "desc": "(can 250ml)", "image": "/placeholder.svg" }
+        { "name": "HELL Classic", "tag": "", "price": "€3.20", "desc": "(can 250ml)", "image": "/hellenergy.jpg" },
+        { "name": "Red Bull", "tag": "", "price": "€3.50", "desc": "(can 250ml)", "image": "/redbull.jpg" }
       ]
     },
     {
