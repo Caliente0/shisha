@@ -27,8 +27,23 @@ export const Menu = () => {
     fetch('/data/menu.json')
       .then(res => res.json())
       .then(data => {
-        // Show only the first 3 categories for the main page preview
-        const previewCategories = data.categories.slice(0, 3);
+        // Handle both old structure (categories) and new structure (sections with subsections)
+        let previewCategories: MenuCategory[] = [];
+        
+        if (data.sections) {
+          // New structure: Get first subsection from first 3 sections
+          previewCategories = data.sections.slice(0, 3)
+            .map((section: any) => section.subsections[0])
+            .filter(Boolean)
+            .map((subsection: any) => ({
+              name: subsection.name,
+              items: subsection.items.slice(0, 3) // Show first 3 items per subsection
+            }));
+        } else if (data.categories) {
+          // Old structure: Show first 3 categories
+          previewCategories = data.categories.slice(0, 3);
+        }
+        
         setMenuData({ categories: previewCategories });
         setLoading(false);
       })
@@ -119,24 +134,26 @@ export const Menu = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     
                     {/* Tag */}
-                    <div className="absolute top-4 left-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                        item.tag === 'Signature' ? 'gold-metallic text-black' :
-                        item.tag === 'New' ? 'bg-emerald-600 text-white' :
-                        item.tag === 'Premium' ? 'bg-amber-700 text-white' :
-                        item.tag === 'Popular' ? 'bg-rose-600 text-white' :
-                        item.tag === 'Classic' ? 'bg-slate-600 text-white' :
-                        item.tag === 'Exotic' ? 'bg-purple-600 text-white' :
-                        item.tag === 'Refreshing' ? 'bg-blue-600 text-white' :
-                        item.tag === 'Healthy' ? 'bg-green-600 text-white' :
-                        item.tag === 'Natural' ? 'bg-emerald-500 text-white' :
-                        item.tag === 'Pure' ? 'bg-gray-600 text-white' :
-                        item.tag === 'Boost' ? 'bg-orange-600 text-white' :
-                        'gold-metallic text-black'
-                      }`}>
-                        {item.tag}
-                      </span>
-                    </div>
+                    {item.tag && (
+                      <div className="absolute top-4 left-4">
+                        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                          item.tag === 'Signature' ? 'gold-metallic text-black' :
+                          item.tag === 'New' ? 'bg-emerald-600 text-white' :
+                          item.tag === 'Premium' ? 'bg-amber-700 text-white' :
+                          item.tag === 'Popular' ? 'bg-rose-600 text-white' :
+                          item.tag === 'Classic' ? 'bg-slate-600 text-white' :
+                          item.tag === 'Exotic' ? 'bg-purple-600 text-white' :
+                          item.tag === 'Refreshing' ? 'bg-blue-600 text-white' :
+                          item.tag === 'Healthy' ? 'bg-green-600 text-white' :
+                          item.tag === 'Natural' ? 'bg-emerald-500 text-white' :
+                          item.tag === 'Pure' ? 'bg-gray-600 text-white' :
+                          item.tag === 'Boost' ? 'bg-orange-600 text-white' :
+                          'gold-metallic text-black'
+                        }`}>
+                          {item.tag}
+                        </span>
+                      </div>
+                    )}
 
                   </div>
 

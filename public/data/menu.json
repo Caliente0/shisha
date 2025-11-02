@@ -1,191 +1,221 @@
 {
-  "categories": [
+  "sections": [
     {
-      "name": "Hot Beverages",
-      "items": [
-        { "name": "Tea", "tag": "", "price": "€3", "desc": "(choose your geusi)", "image": "/tea.jpg" },
-        { "name": "Instant Coffee", "tag": "", "price": "€3", "desc": "(Nescafe)", "image": "/nescafe.jpg" },
-        { "name": "Espresso Coffee", "tag": "", "price": "€2.50", "desc": "", "image": "/espresso.jpg" },
-        { "name": "Double Espresso Coffee", "tag": "", "price": "€3.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Cappuchino", "tag": "", "price": "€3.50", "desc": "", "image": "/placeholder.svg"},
-        { "name": "Cypriot Coffee", "tag": "", "price": "€2.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Hot Chocolate", "tag": "", "price": "€3.80", "desc": "", "image": "/placeholder.svg" },
-        { "name": "White Chocolate", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg"},
-        { "name": "Vienna Chocolate", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Latte", "tag": "", "price": "€3.80", "desc": "", "image": "/placeholder.svg"},
-        { "name": "Espresso Macchiato", "tag": "", "price": "€2.80", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Americano", "tag": "", "price": "€3.50", "desc": "", "image": "/placeholder.svg"},
-        { "name": "Irish Coffee", "tag": "", "price": "€7.50", "desc": "(with fresh cream)", "image": "/placeholder.svg"}
-      ]
-    },
-    { 
-      "name": "Cold Beverages",
-      "items": [
-        { "name": "Frappe", "tag": "", "price": "€3.50", "desc": "(Nescafe)", "image": "/frappe.jpg" },
-        { "name": "Freddo Espresso", "tag": "", "price": "€3.50", "desc": "", "image": "/iceesprosso.jpg" },
-        { "name": "Freddo Cappuchino", "tag": "", "price": "€3.20", "desc": "", "image": "/cappucino.jpg" },
-        { "name": "Cold Chocolate", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Fresh Orange Juice", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Box Juices by glass", "tag": "", "price": "€3.50", "desc": "(Orange, apple, peach, cranberry)", "image": "/placeholder.svg" },
-        { "name": "ICE - TEA", "tag": "", "price": "€3.50", "desc": "(Lemon, Peach)", "image": "/placeholder.svg" },
-        { "name": "Sparkling Water", "tag": "", "price": "€3.50", "desc": "(bottle 250ml)", "image": "/placeholder.svg" },
-        { "name": "Soft Drinks", "tag": "", "price": "€3.50", "desc": "(bottle 500ml)", "image": "/placeholder.svg" },
-        { "name": "Pink Soda", "tag": "", "price": "€3.50", "desc": "(bottle 500ml)", "image": "/placeholder.svg" },
-        { "name": "Milkshakes", "tag": "", "price": "€4.50", "desc": "(Vanilla, strawberry, choco, banana)", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "Energy Drinks",
-      "items": [
-        { "name": "HELL Classic", "tag": "", "price": "€3.20", "desc": "(can 250ml)", "image": "/hellenergy.jpg" },
-        { "name": "Red Bull", "tag": "", "price": "€3.50", "desc": "(can 250ml)", "image": "/redbull.jpg" }
-      ]
-    },
-    {
-      "name": "Local Beers",
-      "items": [
-        { "name": "KEO", "tag": "", "price": "€3.80", "desc": "(33cl)", "image": "/placeholder.svg" },
-        { "name": "Carlsberg", "tag": "", "price": "€3.80", "desc": "(33cl)", "image": "/placeholder.svg" },
-        { "name": "KEO", "tag": "", "price": "€5.50", "desc": "(63cl)", "image": "/placeholder.svg" },
-        { "name": "Carlsberg", "tag": "", "price": "€5.50", "desc": "(63cl)", "image": "/placeholder.svg" },
-        { "name": "LEON", "tag": "", "price": "€5.50", "desc": "(63cl)", "image": "/placeholder.svg" }
+      "name": "Beverages",
+      "subsections": [
+        {
+          "name": "Hot Beverages",
+          "items": [
+            { "name": "Tea", "tag": "", "price": "€3", "desc": "(choose your geusi)", "image": "/tea.jpg" },
+            { "name": "Instant Coffee", "tag": "", "price": "€3", "desc": "(Nescafe)", "image": "/nescafe.jpg" },
+            { "name": "Espresso Coffee", "tag": "", "price": "€2.50", "desc": "", "image": "/espresso.jpg" },
+            { "name": "Double Espresso Coffee", "tag": "", "price": "€3.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Cappuchino", "tag": "", "price": "€3.50", "desc": "", "image": "/placeholder.svg"},
+            { "name": "Cypriot Coffee", "tag": "", "price": "€2.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Hot Chocolate", "tag": "", "price": "€3.80", "desc": "", "image": "/placeholder.svg" },
+            { "name": "White Chocolate", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg"},
+            { "name": "Vienna Chocolate", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Latte", "tag": "", "price": "€3.80", "desc": "", "image": "/placeholder.svg"},
+            { "name": "Espresso Macchiato", "tag": "", "price": "€2.80", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Americano", "tag": "", "price": "€3.50", "desc": "", "image": "/placeholder.svg"},
+            { "name": "Irish Coffee", "tag": "", "price": "€7.50", "desc": "(with fresh cream)", "image": "/placeholder.svg"}
+          ]
+        },
+        { 
+          "name": "Cold Beverages",
+          "items": [
+            { "name": "Frappe", "tag": "", "price": "€3.50", "desc": "(Nescafe)", "image": "/frappe.jpg" },
+            { "name": "Freddo Espresso", "tag": "", "price": "€3.50", "desc": "", "image": "/iceesprosso.jpg" },
+            { "name": "Freddo Cappuchino", "tag": "", "price": "€3.20", "desc": "", "image": "/cappucino.jpg" },
+            { "name": "Cold Chocolate", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Fresh Orange Juice", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Box Juices by glass", "tag": "", "price": "€3.50", "desc": "(Orange, apple, peach, cranberry)", "image": "/placeholder.svg" },
+            { "name": "ICE - TEA", "tag": "", "price": "€3.50", "desc": "(Lemon, Peach)", "image": "/placeholder.svg" },
+            { "name": "Sparkling Water", "tag": "", "price": "€3.50", "desc": "(bottle 250ml)", "image": "/placeholder.svg" },
+            { "name": "Soft Drinks", "tag": "", "price": "€3.50", "desc": "(bottle 500ml)", "image": "/placeholder.svg" },
+            { "name": "Pink Soda", "tag": "", "price": "€3.50", "desc": "(bottle 500ml)", "image": "/placeholder.svg" },
+            { "name": "Milkshakes", "tag": "", "price": "€4.50", "desc": "(Vanilla, strawberry, choco, banana)", "image": "/placeholder.svg" }
+          ]
+        },
+        {
+          "name": "Energy Drinks",
+          "items": [
+            { "name": "HELL Classic", "tag": "", "price": "€3.20", "desc": "(can 250ml)", "image": "/hellenergy.jpg" },
+            { "name": "Red Bull", "tag": "", "price": "€3.50", "desc": "(can 250ml)", "image": "/redbull.jpg" }
+          ]
+        }
       ]
     },
     {
-      "name": "Imported Beers",
-      "items": [
-        { "name": "Budweiser", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Becks", "tag": "", "price": "€5", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Guiness", "tag": "", "price": "€5", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Corona", "tag": "", "price": "€5", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Ciders", "tag": "", "price": "€4.70", "desc": "(Strongbow, Somersby, Kopparberg, Magner's)", "image": "/placeholder.svg" }
+      "name": "Beers",
+      "subsections": [
+        {
+          "name": "Local Beers",
+          "items": [
+            { "name": "KEO", "tag": "", "price": "€3.80", "desc": "(33cl)", "image": "/placeholder.svg" },
+            { "name": "Carlsberg", "tag": "", "price": "€3.80", "desc": "(33cl)", "image": "/placeholder.svg" },
+            { "name": "KEO", "tag": "", "price": "€5.50", "desc": "(63cl)", "image": "/placeholder.svg" },
+            { "name": "Carlsberg", "tag": "", "price": "€5.50", "desc": "(63cl)", "image": "/placeholder.svg" },
+            { "name": "LEON", "tag": "", "price": "€5.50", "desc": "(63cl)", "image": "/placeholder.svg" }
+          ]
+        },
+        {
+          "name": "Imported Beers",
+          "items": [
+            { "name": "Budweiser", "tag": "", "price": "€4", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Becks", "tag": "", "price": "€5", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Guiness", "tag": "", "price": "€5", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Corona", "tag": "", "price": "€5", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Ciders", "tag": "", "price": "€4.70", "desc": "(Strongbow, Somersby, Kopparberg, Magner's)", "image": "/placeholder.svg" }
+          ]
+        }
       ]
     },
     {
-      "name": "Brandies",
-      "items": [
-        { "name": "Metaxa 5*", "tag": "", "price": "€6", "desc": "(5cl)", "image": "/placeholder.svg" },
-        { "name": "Metaxa 7*", "tag": "", "price": "€7", "desc": "(5cl)", "image": "/placeholder.svg" },
-        { "name": "Hennessy", "tag": "", "price": "€8", "desc": "(5cl)", "image": "/placeholder.svg" },
-        { "name": "Courvoisier", "tag": "", "price": "€7", "desc": "(5cl)", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "Special Gin",
-      "items": [
-        { "name": "Hendricks", "tag": "", "price": "€7", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Pink Cherry", "tag": "", "price": "€6.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "BOMBAY", "tag": "", "price": "€6.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "MARE", "tag": "", "price": "€7", "desc": "", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "Whiskeys",
-      "items": [
-        { "name": "Imported", "tag": "", "price": "€5", "desc": "(5cl)", "image": "/placeholder.svg" },
-        { "name": "Premium", "tag": "", "price": "€6", "desc": "(5cl)", "image": "/placeholder.svg" },
-        { "name": "MALT", "tag": "", "price": "€8", "desc": "(5cl)", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "Special Vodka",
-      "items": [
-        { "name": "Beluga", "tag": "", "price": "€8", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Belvedere", "tag": "", "price": "€8", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Grey Goose", "tag": "", "price": "€8", "desc": "", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "Aperetifs - Digestives",
-      "items": [
-        { "name": "Ouzo, Sambuca, Zivania", "tag": "", "price": "€4", "desc": "(5cl)", "image": "/placeholder.svg" }
+      "name": "Spirits",
+      "subsections": [
+        {
+          "name": "Brandies",
+          "items": [
+            { "name": "Metaxa 5*", "tag": "", "price": "€6", "desc": "(5cl)", "image": "/placeholder.svg" },
+            { "name": "Metaxa 7*", "tag": "", "price": "€7", "desc": "(5cl)", "image": "/placeholder.svg" },
+            { "name": "Hennessy", "tag": "", "price": "€8", "desc": "(5cl)", "image": "/placeholder.svg" },
+            { "name": "Courvoisier", "tag": "", "price": "€7", "desc": "(5cl)", "image": "/placeholder.svg" }
+          ]
+        },
+        {
+          "name": "Special Gin",
+          "items": [
+            { "name": "Hendricks", "tag": "", "price": "€7", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Pink Cherry", "tag": "", "price": "€6.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "BOMBAY", "tag": "", "price": "€6.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "MARE", "tag": "", "price": "€7", "desc": "", "image": "/placeholder.svg" }
+          ]
+        },
+        {
+          "name": "Whiskeys",
+          "items": [
+            { "name": "Imported", "tag": "", "price": "€5", "desc": "(5cl)", "image": "/placeholder.svg" },
+            { "name": "Premium", "tag": "", "price": "€6", "desc": "(5cl)", "image": "/placeholder.svg" },
+            { "name": "MALT", "tag": "", "price": "€8", "desc": "(5cl)", "image": "/placeholder.svg" }
+          ]
+        },
+        {
+          "name": "Special Vodka",
+          "items": [
+            { "name": "Beluga", "tag": "", "price": "€8", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Belvedere", "tag": "", "price": "€8", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Grey Goose", "tag": "", "price": "€8", "desc": "", "image": "/placeholder.svg" }
+          ]
+        },
+        {
+          "name": "Aperetifs - Digestives",
+          "items": [
+            { "name": "Ouzo, Sambuca, Zivania", "tag": "", "price": "€4", "desc": "(5cl)", "image": "/placeholder.svg" }
+          ]
+        }
       ]
     },
     {
       "name": "Cocktails",
-      "items": [
-        { "name": "Blue Lagoon", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Brandy Sour", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Pina Colada", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Sex on the Beach", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Gin Fizz", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Tom Collins", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Tequila Sunrise", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "White/Black Russian", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" }
+      "subsections": [
+        {
+          "name": "Classic Cocktails",
+          "items": [
+            { "name": "Blue Lagoon", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Brandy Sour", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Pina Colada", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Sex on the Beach", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Gin Fizz", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Tom Collins", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Tequila Sunrise", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "White/Black Russian", "tag": "", "price": "€7.50", "desc": "", "image": "/placeholder.svg" }
+          ]
+        },
+        {
+          "name": "Special Cocktails",
+          "items": [
+            { "name": "Old Fashion", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Margarita", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Whiskey Sour", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Mai Tai", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Negroni", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Daquiri", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Cosmopolitan", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Hugo", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Classic Martini", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Frozen Daquir / Frozen Margarita", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Long Island", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Aperol", "tag": "", "price": "€9.50", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Mojito", "tag": "", "price": "€8", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Espresso Martini / Porn Star Martini", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" }
+          ]
+        },
+        {
+          "name": "Non-Alcoholic Cocktails",
+          "items": [
+            { "name": "Virgin Mojito", "tag": "", "price": "€6", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Cinderella", "tag": "", "price": "€6", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Virgin Colada", "tag": "", "price": "€6", "desc": "", "image": "/placeholder.svg" },
+            { "name": "Micky Mouse", "tag": "", "price": "€6", "desc": "", "image": "/placeholder.svg" }
+          ]
+        }
       ]
     },
     {
-      "name": "Special Cocktails",
-      "items": [
-        { "name": "Old Fashion", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Margarita", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Whiskey Sour", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Mai Tai", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Negroni", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Daquiri", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Cosmopolitan", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Hugo", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Classic Martini", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Frozen Daquir / Frozen Margarita", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Long Island", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Aperol", "tag": "", "price": "€9.50", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Mojito", "tag": "", "price": "€8", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Espresso Martini / Porn Star Martini", "tag": "", "price": "€9", "desc": "", "image": "/placeholder.svg" }
+      "name": "Wine",
+      "subsections": [
+        {
+          "name": "White Wine",
+          "items": [
+            { "name": "Vasilikon Xinisteri", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "Petritis Xinisteri", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "Persefoni Medium", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "Alina Medium", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "Vlassides Sauvignon Blanc", "tag": "", "price": "€26", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "Toókos Chardonnay", "tag": "", "price": "€26", "desc": "(Bottle)", "image": "/placeholder.svg" }
+          ]
+        },
+        {
+          "name": "Red Wine",
+          "items": [
+            { "name": "Vlassides Sauvignon Blanc", "tag": "", "price": "€26", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "Vlassides Merlot", "tag": "", "price": "€28", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "Vlassides Shiraz", "tag": "", "price": "€28", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "Vasilikon Methy", "tag": "", "price": "€29", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "Agios Onoufrios", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "Saint Fotios", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" }
+          ]
+        },
+        {
+          "name": "Rose Wine",
+          "items": [
+            { "name": "Valentina Medium", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "Valentina Medium Small", "tag": "", "price": "€5", "desc": "(Bottle Small)", "image": "/placeholder.svg" }
+          ]
+        },
+        {
+          "name": "Sparkling Wine",
+          "items": [
+            { "name": "Prosecco Millesimato", "tag": "", "price": "€25", "desc": "(Bottle)", "image": "/placeholder.svg" },
+            { "name": "DOC Extra Dry", "tag": "", "price": "€6", "desc": "(By Glass)", "image": "/placeholder.svg" }
+          ]
+        }
       ]
     },
     {
-      "name": "Non-Alcoholic Cocktails",
-      "items": [
-        { "name": "Virgin Mojito", "tag": "", "price": "€6", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Cinderella", "tag": "", "price": "€6", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Virgin Colada", "tag": "", "price": "€6", "desc": "", "image": "/placeholder.svg" },
-        { "name": "Micky Mouse", "tag": "", "price": "€6", "desc": "", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "White Wine",
-      "items": [
-        { "name": "Vasilikon Xinisteri", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "Petritis Xinisteri", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "Persefoni Medium", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "Alina Medium", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "Vlassides Sauvignon Blanc", "tag": "", "price": "€26", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "Toókos Chardonnay", "tag": "", "price": "€26", "desc": "(Bottle)", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "Red Wine",
-      "items": [
-        { "name": "Vlassides Sauvignon Blanc", "tag": "", "price": "€26", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "Vlassides Merlot", "tag": "", "price": "€28", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "Vlassides Shiraz", "tag": "", "price": "€28", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "Vasilikon Methy", "tag": "", "price": "€29", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "Agios Onoufrios", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "Saint Fotios", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "Rose Wine",
-      "items": [
-        { "name": "Valentina Medium", "tag": "", "price": "€19", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "Valentina Medium Small", "tag": "", "price": "€5", "desc": "(Bottle Small)", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "Sparkling Wine",
-      "items": [
-        { "name": "Prosecco Millesimato", "tag": "", "price": "€25", "desc": "(Bottle)", "image": "/placeholder.svg" },
-        { "name": "DOC Extra Dry", "tag": "", "price": "€6", "desc": "(By Glass)", "image": "/placeholder.svg" }
-      ]
-    },
-    {
-      "name": "Our Dishes",
-      "items": [
-        { "name": "Shrimps Chips", "tag": "Exotic", "price": "€4", "desc": "", "image": "/placeholder.svg"},
-        { "name": "Shrimp Tempura", "tag": "Popular", "price": "€10", "desc": "Crunchy Shrimps / 6pcs", "image": "/placeholder.svg" },
-        { "name": "Bao - Bans Shrimps", "tag": "Exotic", "price": "€11.90", "desc": "Baobans bun • Spicy mayo • Cucumber • Avocado • Korean carrot • Microgreen peas • Sesame seeds • Srimp chips / 3pcs", "image": "/placeholder.svg" },
-        { "name": "Spring rolls", "tag": "Premium", "price": "€8", "desc": "Spring rolls Kim Chi / Spring rolls Vega / 5pcs + Spring rolls sauce", "image": "/placeholder.svg" },
-        { "name": "Gyoza", "tag": "Exotic", "price": "€10", "desc": "Shrimp / Chicken / Pork Kim-Chi Gyoza 6pcs • Spicy sauce • Gyoza Sauce • Sesame • Green onion", "image": "/placeholder.svg"}
+      "name": "Food",
+      "subsections": [
+        {
+          "name": "Our Dishes",
+          "items": [
+            { "name": "Shrimps Chips", "tag": "Exotic", "price": "€4", "desc": "", "image": "/placeholder.svg"},
+            { "name": "Shrimp Tempura", "tag": "Popular", "price": "€10", "desc": "Crunchy Shrimps / 6pcs", "image": "/placeholder.svg" },
+            { "name": "Bao - Bans Shrimps", "tag": "Exotic", "price": "€11.90", "desc": "Baobans bun • Spicy mayo • Cucumber • Avocado • Korean carrot • Microgreen peas • Sesame seeds • Srimp chips / 3pcs", "image": "/placeholder.svg" },
+            { "name": "Spring rolls", "tag": "Premium", "price": "€8", "desc": "Spring rolls Kim Chi / Spring rolls Vega / 5pcs + Spring rolls sauce", "image": "/placeholder.svg" },
+            { "name": "Gyoza", "tag": "Exotic", "price": "€10", "desc": "Shrimp / Chicken / Pork Kim-Chi Gyoza 6pcs • Spicy sauce • Gyoza Sauce • Sesame • Green onion", "image": "/placeholder.svg"}
+          ]
+        }
       ]
     }
   ]

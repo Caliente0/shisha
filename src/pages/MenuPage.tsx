@@ -11,17 +11,22 @@ interface MenuItem {
   image: string;
 }
 
-interface MenuCategory {
+interface MenuSubsection {
   name: string;
   items: MenuItem[];
 }
 
+interface MenuSection {
+  name: string;
+  subsections: MenuSubsection[];
+}
+
 interface MenuData {
-  categories: MenuCategory[];
+  sections: MenuSection[];
 }
 
 export const MenuPage = () => {
-  const [menuData, setMenuData] = useState<MenuData>({ categories: [] });
+  const [menuData, setMenuData] = useState<MenuData>({ sections: [] });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -85,110 +90,155 @@ export const MenuPage = () => {
             </p>
           </motion.div>
 
-          {/* Menu Navigation */}
+          {/* Menu Navigation - Main Sections */}
           <motion.div
             {...animationVariants.fadeInUpDelayed}
             whileInView={animationVariants.fadeInUpDelayed.animate}
             viewport={viewportSettings}
             className="flex flex-wrap justify-center gap-3 xs:gap-4 sm:gap-6 mb-12 xs:mb-16 md:mb-20"
           >
-            {menuData.categories.map((category, index) => (
+            {menuData.sections.map((section, index) => (
               <button
-                key={category.name}
+                key={section.name}
                 onClick={() => {
-                  const element = document.getElementById(`category-${index}`);
+                  const element = document.getElementById(`section-${index}`);
                   if (element) {
                     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
                 }}
                 className="px-4 xs:px-6 py-2 xs:py-3 bg-black/40 backdrop-blur-sm border border-gold-light/30 text-gold-light hover:bg-gold-light/10 hover:border-gold-light hover:text-gold transition-all duration-300 rounded-full text-sm xs:text-base font-medium min-w-[100px] xs:min-w-[120px]"
               >
-                {category.name}
+                {section.name}
               </button>
             ))}
           </motion.div>
         </div>
       </div>
 
-      {/* Menu Categories */}
+      {/* Menu Sections */}
       <div className="relative py-8 xs:py-10 sm:py-12 md:py-16 lg:py-section">
         <div className="absolute inset-0 bg-ink/40" />
         
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          {menuData.categories.map((category, categoryIndex) => (
+          {menuData.sections.map((section, sectionIndex) => (
             <motion.div
-              key={category.name}
-              id={`category-${categoryIndex}`}
+              key={section.name}
+              id={`section-${sectionIndex}`}
               {...animationVariants.fadeInUp}
               whileInView={animationVariants.fadeInUp.animate}
               viewport={viewportSettings}
-              transition={{ delay: getStaggerDelay(categoryIndex, 0.2) }}
-              className="mb-16 xs:mb-20 md:mb-24"
+              transition={{ delay: getStaggerDelay(sectionIndex, 0.2) }}
+              className="mb-16 xs:mb-20 md:mb-28"
             >
-              {/* Category Header */}
-              <div className="text-center mb-12 xs:mb-16 md:mb-20">
-                <h2 className="heading-secondary text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-gold-light mb-4">
-                  {category.name}
-                </h2>
-                <div className="w-32 h-0.5 bg-gold-light mx-auto"></div>
-              </div>
-
-              {/* Category Items */}
-              <motion.div 
-                className="max-w-4xl mx-auto"
-                variants={animationVariants.staggerContainer}
-                initial="initial"
-                whileInView="animate"
-                viewport={viewportSettings}
-              >
-                <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 xs:p-8 sm:p-10 md:p-12 border border-gold-light/20">
-                  {category.items.map((item, index) => (
-                    <motion.div
-                      key={item.name}
-                      variants={animationVariants.staggerItem}
-                      transition={{ delay: getStaggerDelay(index, 0.05) }}
-                      className="flex justify-between items-start py-4 xs:py-5 sm:py-6 border-b border-gold-light/10 last:border-b-0"
-                    >
-                      {/* Left side - Name and Description */}
-                      <div className="flex-1 pr-4">
-                        <div className="flex items-center gap-3 mb-2">
-                          <h3 className="heading-secondary text-lg xs:text-xl md:text-2xl text-gold-light">
-                            {item.name}
-                          </h3>
-                          {item.tag && (
-                            <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                              item.tag === 'Signature' ? 'gold-metallic text-black' :
-                              item.tag === 'New' ? 'bg-emerald-600 text-white' :
-                              item.tag === 'Premium' ? 'bg-amber-700 text-white' :
-                              item.tag === 'Popular' ? 'bg-rose-600 text-white' :
-                              item.tag === 'Classic' ? 'bg-slate-600 text-white' :
-                              item.tag === 'Exotic' ? 'bg-purple-600 text-white' :
-                              item.tag === 'Refreshing' ? 'bg-blue-600 text-white' :
-                              item.tag === 'Healthy' ? 'bg-green-600 text-white' :
-                              item.tag === 'Natural' ? 'bg-emerald-500 text-white' :
-                              item.tag === 'Pure' ? 'bg-gray-600 text-white' :
-                              item.tag === 'Boost' ? 'bg-orange-600 text-white' :
-                              'gold-metallic text-black'
-                            }`}>
-                              {item.tag}
-                            </span>
-                          )}
-                        </div>
-                        <p className="body-primary text-sm xs:text-base leading-relaxed text-gray-300">
-                          {item.desc}
-                        </p>
-                      </div>
-
-                      {/* Right side - Price */}
-                      <div className="flex-shrink-0">
-                        <span className="text-gold-light font-semibold text-lg xs:text-xl md:text-2xl">
-                          {item.price}
-                        </span>
-                      </div>
-                    </motion.div>
-                  ))}
+              {/* Section Container with Background */}
+              <div className="relative bg-black/30 backdrop-blur-sm rounded-3xl border border-gold-light/20 p-6 xs:p-8 sm:p-10 md:p-12 lg:p-16 mb-8">
+                {/* Section Header */}
+                <div className="text-center mb-10 xs:mb-12 sm:mb-16 md:mb-20">
+                  <h2 className="heading-secondary text-3xl xs:text-4xl sm:text-5xl md:text-6xl text-gold-light mb-4">
+                    {section.name}
+                  </h2>
+                  <div className="w-48 h-1 bg-gradient-to-r from-transparent via-gold-light to-transparent mx-auto"></div>
                 </div>
-              </motion.div>
+
+                {/* Subsections */}
+                {section.subsections.map((subsection, subsectionIndex) => (
+                  <motion.div
+                    key={subsection.name}
+                    {...animationVariants.fadeInUp}
+                    whileInView={animationVariants.fadeInUp.animate}
+                    viewport={viewportSettings}
+                    transition={{ delay: getStaggerDelay(subsectionIndex, 0.1) }}
+                    className={`mb-16 xs:mb-20 md:mb-24 ${subsectionIndex !== section.subsections.length - 1 ? 'pb-16 xs:pb-20 md:pb-24 border-b border-gold-light/20' : ''}`}
+                  >
+                    {/* Subsection Header with Styling */}
+                    <div className="mb-10 xs:mb-12 sm:mb-14 md:mb-16">
+                      <div className="flex items-center justify-center gap-4 mb-4">
+                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gold-light/40 to-gold-light/40"></div>
+                        <h3 className="heading-secondary text-xl xs:text-2xl sm:text-3xl md:text-4xl text-gold-light font-semibold whitespace-nowrap px-4">
+                          {subsection.name}
+                        </h3>
+                        <div className="flex-1 h-px bg-gradient-to-l from-transparent via-gold-light/40 to-gold-light/40"></div>
+                      </div>
+                    </div>
+
+                    {/* Subsection Items - Grid Layout */}
+                    <motion.div 
+                      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 xs:gap-6 sm:gap-8 md:gap-10"
+                      variants={animationVariants.staggerContainer}
+                      initial="initial"
+                      whileInView="animate"
+                      viewport={viewportSettings}
+                    >
+                      {subsection.items.map((item, index) => (
+                        <motion.div
+                          key={item.name}
+                          variants={animationVariants.staggerItem}
+                          transition={{ delay: getStaggerDelay(index, 0.1) }}
+                          className="premium-card hover-lift overflow-hidden group"
+                        >
+                          {/* Image */}
+                          <div className="relative h-64 xs:h-72 sm:h-80 md:h-96 overflow-hidden">
+                            <img
+                              src={item.image}
+                              alt={item.name}
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                              onError={(e) => {
+                                const target = e.target as HTMLImageElement;
+                                target.src = '/placeholder.svg';
+                              }}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            
+                            {/* Tag */}
+                            {item.tag && (
+                              <div className="absolute top-4 left-4">
+                                <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                                  item.tag === 'Signature' ? 'gold-metallic text-black' :
+                                  item.tag === 'New' ? 'bg-emerald-600 text-white' :
+                                  item.tag === 'Premium' ? 'bg-amber-700 text-white' :
+                                  item.tag === 'Popular' ? 'bg-rose-600 text-white' :
+                                  item.tag === 'Classic' ? 'bg-slate-600 text-white' :
+                                  item.tag === 'Exotic' ? 'bg-purple-600 text-white' :
+                                  item.tag === 'Refreshing' ? 'bg-blue-600 text-white' :
+                                  item.tag === 'Healthy' ? 'bg-green-600 text-white' :
+                                  item.tag === 'Natural' ? 'bg-emerald-500 text-white' :
+                                  item.tag === 'Pure' ? 'bg-gray-600 text-white' :
+                                  item.tag === 'Boost' ? 'bg-orange-600 text-white' :
+                                  'gold-metallic text-black'
+                                }`}>
+                                  {item.tag}
+                                </span>
+                              </div>
+                            )}
+
+                            {/* Price Badge */}
+                            <div className="absolute top-4 right-4">
+                              <span className="px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-sm text-gold-light font-semibold text-sm xs:text-base border border-gold-light/30">
+                                {item.price}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Content */}
+                          <div className="p-4 xs:p-6 sm:p-8">
+                            {/* Name */}
+                            <h3 className="heading-secondary text-lg xs:text-xl md:text-2xl mb-3 xs:mb-4 group-hover:text-gold-light transition-colors">
+                              {item.name}
+                            </h3>
+
+                            {/* Description */}
+                            {item.desc && (
+                              <p className="body-primary text-sm xs:text-base leading-relaxed">
+                                {item.desc}
+                              </p>
+                            )}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>
