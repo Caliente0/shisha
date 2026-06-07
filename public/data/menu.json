@@ -1,36 +1,253 @@
 {
   "sections": [
     {
-      "name": "Beverages",
-      "subsections": []
-    },
-    {
-      "name": "Beers",
-      "subsections": []
-    },
-    {
-      "name": "Spirits",
-      "subsections": []
-    },
-    {
-      "name": "Cocktails",
-      "subsections": []
-    },
-    {
-      "name": "Wine",
-      "subsections": []
-    },
-    {
       "name": "Gelato",
-      "subsections": []
+      "subsections": [
+        {
+          "name": "Classic Scoops",
+          "items": [
+            {
+              "name": "Madagascar Vanilla",
+              "tag": "Classic",
+              "price": "$6",
+              "desc": "Slow-churned cream infused with whole Madagascar vanilla beans for a rich, fragrant finish.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Dark Chocolate Fondente",
+              "tag": "Popular",
+              "price": "$6",
+              "desc": "Intense 70% cocoa gelato with a velvety, bittersweet depth.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Sicilian Pistachio",
+              "tag": "Signature",
+              "price": "$7",
+              "desc": "Stone-ground Bronte pistachios blended into a silky, nutty classic.",
+              "image": "/placeholder.svg"
+            }
+          ]
+        },
+        {
+          "name": "Fruit Sorbetto",
+          "items": [
+            {
+              "name": "Alphonso Mango",
+              "tag": "Refreshing",
+              "price": "$6",
+              "desc": "Bright, sun-ripened mango churned dairy-free for a clean, tropical hit.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Wild Strawberry",
+              "tag": "Natural",
+              "price": "$6",
+              "desc": "Hand-picked strawberries with a touch of lemon for a tart, vivid scoop.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Passion Fruit & Lime",
+              "tag": "Exotic",
+              "price": "$7",
+              "desc": "Tangy passion fruit balanced with fresh lime zest.",
+              "image": "/placeholder.svg"
+            }
+          ]
+        },
+        {
+          "name": "Signature Creations",
+          "items": [
+            {
+              "name": "Salted Caramel Swirl",
+              "tag": "Signature",
+              "price": "$8",
+              "desc": "Buttery caramel ribboned with flakes of sea salt and toffee crunch.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Tiramisu Affogato",
+              "tag": "Premium",
+              "price": "$9",
+              "desc": "Mascarpone gelato drowned in a shot of hot espresso and cocoa dust.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Pistachio & Rose",
+              "tag": "New",
+              "price": "$9",
+              "desc": "Sicilian pistachio layered with delicate Persian rose.",
+              "image": "/placeholder.svg"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Waffles",
-      "subsections": []
+      "subsections": [
+        {
+          "name": "Sweet Classics",
+          "items": [
+            {
+              "name": "Belgian Butter & Sugar",
+              "tag": "Classic",
+              "price": "$8",
+              "desc": "Crisp golden waffle dusted with vanilla sugar and a knob of melting butter.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Maple & Pecan",
+              "tag": "Popular",
+              "price": "$10",
+              "desc": "Warm waffle drizzled with pure maple syrup and candied pecans.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Berry Cream Stack",
+              "tag": "Refreshing",
+              "price": "$11",
+              "desc": "Layered with whipped cream and a medley of fresh seasonal berries.",
+              "image": "/placeholder.svg"
+            }
+          ]
+        },
+        {
+          "name": "Chocolate Indulgence",
+          "items": [
+            {
+              "name": "Triple Chocolate Melt",
+              "tag": "Signature",
+              "price": "$12",
+              "desc": "Dark, milk, and white chocolate cascading over a warm waffle.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Nutella Banana",
+              "tag": "Popular",
+              "price": "$11",
+              "desc": "Lashings of hazelnut spread with caramelised banana slices.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Brownie Overload",
+              "tag": "Premium",
+              "price": "$13",
+              "desc": "Topped with fudge brownie chunks, chocolate sauce, and gelato.",
+              "image": "/placeholder.svg"
+            }
+          ]
+        },
+        {
+          "name": "Savoury Waffles",
+          "items": [
+            {
+              "name": "Chicken & Maple",
+              "tag": "Signature",
+              "price": "$14",
+              "desc": "Crispy buttermilk chicken on a fluffy waffle with a maple glaze.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Smoked Cheese & Herb",
+              "tag": "New",
+              "price": "$12",
+              "desc": "Savoury waffle folded with smoked cheese and fresh garden herbs.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Avocado & Egg",
+              "tag": "Healthy",
+              "price": "$13",
+              "desc": "Smashed avocado, poached egg, and chilli flakes on a warm waffle.",
+              "image": "/placeholder.svg"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Crepes",
-      "subsections": []
+      "subsections": [
+        {
+          "name": "Sweet Crepes",
+          "items": [
+            {
+              "name": "Lemon & Sugar",
+              "tag": "Classic",
+              "price": "$7",
+              "desc": "The timeless thin crepe with fresh lemon juice and a sugar dusting.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Strawberries & Cream",
+              "tag": "Popular",
+              "price": "$10",
+              "desc": "Folded with macerated strawberries and pillows of Chantilly cream.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Apple Cinnamon",
+              "tag": "Refreshing",
+              "price": "$10",
+              "desc": "Warm spiced apple compote with a hint of cinnamon and caramel.",
+              "image": "/placeholder.svg"
+            }
+          ]
+        },
+        {
+          "name": "Decadent Crepes",
+          "items": [
+            {
+              "name": "Nutella & Banana",
+              "tag": "Signature",
+              "price": "$11",
+              "desc": "Generous hazelnut spread with fresh banana and toasted hazelnuts.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Biscoff Dream",
+              "tag": "New",
+              "price": "$12",
+              "desc": "Warm Biscoff spread, crushed cookies, and a scoop of vanilla gelato.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Dark Chocolate & Raspberry",
+              "tag": "Premium",
+              "price": "$12",
+              "desc": "Molten dark chocolate cut with tart raspberry coulis.",
+              "image": "/placeholder.svg"
+            }
+          ]
+        },
+        {
+          "name": "Savoury Galettes",
+          "items": [
+            {
+              "name": "Ham & Cheese",
+              "tag": "Classic",
+              "price": "$12",
+              "desc": "Buckwheat galette with smoked ham, gruyère, and a baked egg.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Mushroom & Spinach",
+              "tag": "Healthy",
+              "price": "$12",
+              "desc": "Sautéed mushrooms, wilted spinach, and creamy goat's cheese.",
+              "image": "/placeholder.svg"
+            },
+            {
+              "name": "Chicken & Pesto",
+              "tag": "Signature",
+              "price": "$14",
+              "desc": "Grilled chicken, basil pesto, sun-dried tomato, and mozzarella.",
+              "image": "/placeholder.svg"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
