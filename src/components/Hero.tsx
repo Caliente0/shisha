@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { animationVariants, viewportSettings } from '@/lib/animations';
+import { SmokePlume } from '@/components/SmokePlume';
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -21,8 +22,10 @@ export const Hero = () => {
       
       {/* Legibility Overlay */}
       <div className="absolute inset-0 legibility-overlay" />
-      
-      
+
+      {/* Smoke plumes + embers */}
+      <SmokePlume />
+
       {/* Content */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
         <div className="text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full pt-16 xs:pt-20 sm:pt-0">

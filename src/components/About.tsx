@@ -67,8 +67,11 @@ export const About = () => {
               transition={{ delay: getStaggerDelay(index, 0.2) }}
               className="premium-card hover-lift p-4 xs:p-6 sm:p-8 md:p-10 text-center"
             >
-              <div className="text-gold-light mb-6">
-                <feature.icon size={48} className="mx-auto" />
+              <div
+                className="icon-glow-container text-gold-light mb-6 mx-auto"
+                style={{ animationDelay: `${index * 1.1}s` }}
+              >
+                <feature.icon size={44} />
               </div>
               
               <h3 className="heading-secondary text-lg xs:text-xl sm:text-2xl md:text-3xl mb-3 xs:mb-4 sm:mb-6">
