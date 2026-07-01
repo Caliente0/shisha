@@ -1,11 +1,7 @@
 [
-  { "src": "/placeholder.svg", "alt": "Photos Coming Soon" },
-  { "src": "/placeholder.svg", "alt": "Photos Coming Soon" },
-  { "src": "/placeholder.svg", "alt": "Photos Coming Soon" },
-  { "src": "/placeholder.svg", "alt": "Photos Coming Soon" },
-  { "src": "/placeholder.svg", "alt": "Photos Coming Soon" },
-  { "src": "/placeholder.svg", "alt": "Photos Coming Soon" },
-  { "src": "/placeholder.svg", "alt": "Photos Coming Soon" },
-  { "src": "/placeholder.svg", "alt": "Photos Coming Soon" },
-  { "src": "/placeholder.svg", "alt": "Photos Coming Soon" }
+  { "src": "/real-exterior-02.jpg", "alt": "Caliente — Lounge & Shisha Bar" },
+  { "src": "/real-interior-01.jpg", "alt": "The Lounge"                     },
+  { "src": "/real-interior-02.jpg", "alt": "Moroccan Lanterns"              },
+  { "src": "/real-bar-01.jpg",      "alt": "Premium Spirits"                },
+  { "src": "/real-exterior-01.jpg", "alt": "Outdoor Terrace"                }
 ]
